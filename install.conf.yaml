@@ -7,4 +7,6 @@
     ~/.vimrc: vimrc
     ~/.vim: vim/
     ~/.quiltrc: quiltrc
-- shell: []
+- shell:
+    - git submodule update --init --recursive
+
