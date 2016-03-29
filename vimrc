@@ -7,13 +7,22 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "Plugin 'VundleVim/Vundle.vim'
 "Plugin 'ctrlpvim/ctrlp.vim'
-"Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 "Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on
 
-" Syntax highlighting premanent
-syntax on
+" Code display settings
+syntax on " Syntax highlighting premanent
+set showmatch " Shows brackets
+
+" General display settings
+set title " Show title
+set showmode " Show mode
+set ruler " Show cursor position
+set cursorline " Highlight line with cursor
+set number " Show line number
+set laststatus=2 "Always show the status line
 
 " Set backup file location
 set backupdir=~/.vim/backup//
