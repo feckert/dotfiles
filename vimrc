@@ -12,6 +12,9 @@ Plugin 'bling/vim-airline'
 call vundle#end()
 filetype plugin indent on
 
+" Plugin settings
+let g:airline#extensions#tabline#enabled=1
+
 " Code display settings
 syntax on " Syntax highlighting premanent
 set showmatch " Shows brackets
