@@ -39,3 +39,6 @@ colorscheme desert
 " Set airline theme
 let g:airline_theme='solarized'
 
+" Donot select line number and windows
+set mouse=a
+
