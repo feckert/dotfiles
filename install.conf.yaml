@@ -6,4 +6,5 @@
     ~/.i3: i3/
     ~/.vimrc: vimrc
     ~/.vim: vim/
+    ~/.quiltrc: quiltrc
 - shell: []
