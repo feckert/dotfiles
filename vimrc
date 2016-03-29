@@ -7,7 +7,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "Plugin 'VundleVim/Vundle.vim'
 "Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on
@@ -34,4 +35,7 @@ set undodir=~/.vim/undo//
 
 " Set color shema
 colorscheme desert
+
+" Set airline theme
+let g:airline_theme='solarized'
 
