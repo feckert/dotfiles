@@ -42,3 +42,14 @@ let g:airline_theme='solarized'
 " Donot select line number and windows
 set mouse=a
 
+" Tab as buffer
+set hidden
+let mapleader = "\<Space>"
+nmap <leader>pm :CtrlPMixed<CR>
+nmap <leader>pb :CtrlPBuffer<CR>
+nmap <leader>T :enew<CR>
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>bl :ls<CR>
+
