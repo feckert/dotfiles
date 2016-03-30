@@ -1,4 +1,7 @@
 URxvt.saveLines: 1000
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
+
 URxvt.scrollBar: false
 URxvt.foreground: white
 URxvt.background: black
