@@ -4,6 +4,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.Xresources: Xresources
     ~/.i3: i3/
+    ~/bin: bin/
     ~/.vimrc: vimrc
     ~/.vim: vim/
     ~/.quiltrc: quiltrc
