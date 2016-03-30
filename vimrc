@@ -13,8 +13,23 @@ Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 filetype plugin indent on
 
-" Plugin settings
+" Plugin settings airline
 let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#fnamemod=':t'
+
+" Plugin settings ctrlp
+let g:ctrlp_working_path_mode='ra'
+
+" Plugin airline theme
+"let g:airline_theme='jellybeans'
+let g:airline_theme='term'
+
+" File Browser settings
+let g:netrw_liststyle=3
+
+" Show whitespace char
+set listchars=tab:\|.,trail:.,extends:>,precedes:<
+set list
 
 " Code display settings
 syntax on " Syntax highlighting premanent
@@ -34,22 +49,27 @@ set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
 " Set color shema
-colorscheme desert
-
-" Set airline theme
-let g:airline_theme='solarized'
+colorscheme industry
 
 " Donot select line number and windows
 set mouse=a
 
-" Tab as buffer
+" Allow changing buffer selection
 set hidden
+
+" Add space leader key for commands
 let mapleader = "\<Space>"
-nmap <leader>pm :CtrlPMixed<CR>
-nmap <leader>pb :CtrlPBuffer<CR>
-nmap <leader>T :enew<CR>
+
+" Shortcuts for CtrlP Plugin
+nmap <leader>cm :CtrlPMix ed<CR>
+nmap <leader>cb :CtrlPBuffer<CR>
+
+" Shortcuts for Buffer handling
+nmap <leader>bt :enew<CR>
 nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
 nmap <leader>bq :bp <BAR> bd #<CR>
 nmap <leader>bl :ls<CR>
 
+" Show Filebrowser
+nmap <leader>k :E<cr>
