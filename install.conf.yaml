@@ -12,4 +12,7 @@
     ~/.quiltrc: quiltrc
 - shell:
     - git submodule update --init --recursive
+    - mkdir -p ~/.vim/backup
+    - mkdir -p ~/.vim/swap
+    - mkdir -p ~/.vim/undo
 
