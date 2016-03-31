@@ -9,3 +9,5 @@
 	smtpserverport = 587
 [push]
 	default = simple
+[alias]
+	oneline = log --pretty=oneline
