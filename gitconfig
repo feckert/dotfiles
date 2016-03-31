@@ -1,0 +1,11 @@
+[user]
+	name = Florian Eckert
+	email = feckert@tdt.de
+[sendemail]
+	suppresscc = self
+	smtpuser = Eckert.Florian@googlemail.com
+	smtpserver = smtp.googlemail.com
+	smtpencryption = tls
+	smtpserverport = 587
+[push]
+	default = simple

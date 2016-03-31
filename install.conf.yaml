@@ -3,6 +3,7 @@
     ~/.dotfiles: ''
     ~/.tmux.conf: tmux.conf
     ~/.Xresources: Xresources
+    ~/.gitconfig: gitconfig
     ~/.i3: i3/
     ~/bin: bin/
     ~/.vimrc: vimrc
