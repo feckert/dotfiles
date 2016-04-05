@@ -9,7 +9,7 @@ call vundle#begin()
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
 
@@ -73,3 +73,7 @@ nmap <leader>bl :ls<CR>
 
 " Show Filebrowser
 nmap <leader>k :E<cr>
+
+" Nerdtree shortcuts
+map <C-n> :NERDTreeToggle <CR>
+
