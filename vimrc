@@ -31,6 +31,9 @@ let g:netrw_liststyle=3
 set listchars=tab:\|.,trail:.,extends:>,precedes:<
 set list
 
+" Set char highlight columne
+set colorcolumn=80
+
 " Code display settings
 syntax on " Syntax highlighting premanent
 set showmatch " Shows brackets
