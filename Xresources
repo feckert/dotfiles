@@ -1,10 +1,11 @@
 URxvt.saveLines: 1000
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: true
-
+URxvt.fading: 40
 URxvt.scrollBar: false
 URxvt.foreground: white
 URxvt.background: black
+
 URxvt.secondaryScroll: true
 URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12
 URxvt.perl-ext-common: default,matcher
