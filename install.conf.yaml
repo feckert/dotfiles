@@ -10,6 +10,7 @@
     ~/.vimrc: vimrc
     ~/.vim: vim/
     ~/.quiltrc: quiltrc
+    ~/.i3status.conf: i3status.conf
 - shell:
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/backup
