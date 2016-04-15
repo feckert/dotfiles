@@ -11,3 +11,4 @@
 	default = simple
 [alias]
 	oneline = log --pretty=oneline
+	onegraph = log --oneline --graph --decorate --all
