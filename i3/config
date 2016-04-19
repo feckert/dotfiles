@@ -120,7 +120,11 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# lock screen
 bindsym $mod+Shift+s exec "i3lock"
+
+# rename workspace
+bindsym $mod+Shift+y exec i3-input -F 'Rename workspace to "%s"' -P 'New name: '
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -162,3 +166,4 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle
 
+bindsym $mod+Shift+T border 1pixel
