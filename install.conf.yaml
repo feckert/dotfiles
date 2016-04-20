@@ -11,6 +11,7 @@
     ~/.vim: vim/
     ~/.quiltrc: quiltrc
     ~/.i3status.conf: i3status.conf
+    ~/.bash_aliases: bash_aliases
 - shell:
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/backup
