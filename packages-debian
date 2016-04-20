@@ -51,6 +51,7 @@ doc-debian					install
 docutils-common					install
 docutils-doc					install
 dpkg						install
+dselect						install
 dunst						install
 e2fslibs:amd64					install
 e2fsprogs					install
