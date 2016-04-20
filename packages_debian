@@ -67,6 +67,8 @@ gcc-4.8-base:amd64
 gcc-4.9-base:amd64
 geoip-database
 gettext-base
+git
+git-man
 gnupg
 gnupg-agent
 gnupg2
@@ -157,6 +159,7 @@ libdns-export100
 libdns100
 libedit2:amd64
 libencode-locale-perl
+liberror-perl
 libestr0
 libevent-2.0-5:amd64
 libexpat1:amd64
@@ -428,6 +431,7 @@ readline-common
 rename
 reportbug
 rpcbind
+rsync
 rsyslog
 sed
 sensible-utils
