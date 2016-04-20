@@ -10,5 +10,5 @@
 [push]
 	default = simple
 [alias]
-	oneline = log --pretty=oneline
-	onegraph = log --oneline --graph --decorate --all
+	alias-oneline = log --pretty=oneline
+	alias-onegraph = log --oneline --graph --decorate --all
