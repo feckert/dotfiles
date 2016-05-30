@@ -12,6 +12,8 @@
     ~/.quiltrc: quiltrc
     ~/.i3status.conf: i3status.conf
     ~/.bash_aliases: bash_aliases
+    ~/.zshrc: zshrc
+    ~/.zlogin: zlogin
     ~/.packages-debian: packages-debian
     ~/.irssi: irssi/
 - shell:
