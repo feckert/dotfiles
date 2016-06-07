@@ -48,6 +48,7 @@ debian-archive-keyring				install
 debian-faq					install
 debianutils					install
 dictionaries-common				install
+diffstat					install
 diffutils					install
 discover					install
 discover-data					install
@@ -670,6 +671,7 @@ python-zope.interface				install
 python2.7					install
 python2.7-minimal				install
 qtcore4-l10n					install
+quilt						install
 readline-common					install
 rename						install
 reportbug					install
@@ -799,3 +801,5 @@ xz-utils					install
 zip						install
 zlib1g:amd64					install
 zlib1g-dev:amd64				install
+zsh						install
+zsh-common					install
