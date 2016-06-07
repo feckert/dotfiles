@@ -564,6 +564,7 @@ lmodern						install
 locales						install
 login						install
 logrotate					install
+lrzsz						install
 lsb-base					install
 lsb-release					install
 lsof						install
@@ -576,6 +577,7 @@ manpages-de					install
 manpages-dev					install
 mawk						install
 mime-support					install
+minicom						install
 mlocate						install
 mount						install
 multiarch-support				install
