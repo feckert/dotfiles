@@ -1,3 +1,16 @@
-aptitude install $(cat ~/.packages-debian | awk '{print $1}')
+#Install all packages
+sudo aptitude install $(cat ~/.packages-debian | awk '{print $1}')
+
+#Generate backup of all installed packages
 dpkg --get-selections > ~/.packages-debian
+
+#Add user to dailout group
+sudo adduser $USER dialout
+
+# Add dual screen view
+xrandr --output HDMI1 --mode 1920x1200
+xrandr --output HDMI3 --mode 1920x1200 --right-of HDMI1
+
+# Add user to wireshark group to capture frames
+usermod -a -G wireshark $USER
 
