@@ -159,11 +159,17 @@ bar {
         status_command i3status
 }
 
+# Start network manager
 exec --no-startup-id nm-applet
 
+# Bind audio keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle
 
 bindsym $mod+Shift+T border 1pixel
+
+# Restor Background images
+exec --no-startup-id nitrogen --restore
+
