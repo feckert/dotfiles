@@ -6,6 +6,7 @@
     ~/.gitconfig: gitconfig
     ~/.inputrc: inputrc
     ~/.i3: i3/
+    ~/.config/.wm: config/wm
     ~/bin: bin/
     ~/.vimrc: vimrc
     ~/.vim: vim/
@@ -18,6 +19,7 @@
     ~/.zshrc.pre: zshrc.pre
     ~/.packages-debian: packages-debian
     ~/.irssi: irssi/
+    ~/.xinitrc: xinitrc
 - shell:
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/backup
