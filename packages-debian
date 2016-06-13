@@ -79,6 +79,8 @@ e2fslibs:amd64					install
 e2fsprogs					install
 eject						install
 emacsen-common					install
+evince						install
+evince-common					install
 exim4						install
 exim4-base					install
 exim4-config					install
@@ -115,6 +117,8 @@ git-man						install
 glib-networking:amd64				install
 glib-networking-common				install
 glib-networking-services			install
+gnome-icon-theme				install
+gnome-icon-theme-symbolic			install
 gnome-keyring					install
 gnupg						install
 gnupg-agent					install
@@ -276,6 +280,8 @@ libdconf1:amd64					install
 libdebconfclient0:amd64				install
 libdevmapper1.02.1:amd64			install
 libdiscover2					install
+libdjvulibre-text				install
+libdjvulibre21:amd64				install
 libdns-export100				install
 libdns100					install
 libdpkg-perl					install
@@ -295,7 +301,9 @@ libestr0					install
 libev-perl					install
 libev4						install
 libevdev2					install
+libevdocument3-4				install
 libevent-2.0-5:amd64				install
+libevview3-3					install
 libexif12:amd64					install
 libexpat1:amd64					install
 libfakeroot:amd64				install
@@ -369,6 +377,7 @@ libgtkmm-2.4-1c2a:amd64				install
 libguard-perl					install
 libgudev-1.0-0:amd64				install
 libgusb2:amd64					install
+libgxps2:amd64					install
 libharfbuzz-icu0:amd64				install
 libharfbuzz0b:amd64				install
 libhogweed2:amd64				install
@@ -463,6 +472,7 @@ libmtdev1:amd64					install
 libmtp-common					install
 libmtp-runtime					install
 libmtp9:amd64					install
+libnautilus-extension1a				install
 libncurses5:amd64				install
 libncurses5-dev:amd64				install
 libncursesw5:amd64				install
@@ -526,6 +536,7 @@ libpod-readme-perl				install
 libpolkit-agent-1-0:amd64			install
 libpolkit-backend-1-0:amd64			install
 libpolkit-gobject-1-0:amd64			install
+libpoppler-glib8:amd64				install
 libpoppler-qt4-4:amd64				install
 libpoppler46:amd64				install
 libpopt0:amd64					install
@@ -581,6 +592,7 @@ libsmi2ldbl:amd64				install
 libsoftware-license-perl			install
 libsoup-gnome2.4-1:amd64			install
 libsoup2.4-1:amd64				install
+libspectre1:amd64				install
 libspeechd2:amd64				install
 libspeex1:amd64					install
 libsqlite3-0:amd64				install
