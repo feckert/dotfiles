@@ -42,6 +42,7 @@ coreutils					install
 cpio						install
 cpp						install
 cpp-4.9						install
+crda						install
 cron						install
 dash						install
 dbus						install
@@ -62,6 +63,8 @@ discover					install
 discover-data					install
 dmidecode					install
 dmsetup						install
+dns-root-data					install
+dnsmasq-base					install
 dnsutils					install
 doc-debian					install
 docutils-common					install
@@ -159,11 +162,13 @@ install-info					install
 installation-report				install
 iproute2					install
 iptables					install
+iputils-arping					install
 iputils-ping					install
 isc-dhcp-client					install
 isc-dhcp-common					install
 iso-codes					install
 ispell						install
+iw						install
 javascript-common				install
 kbd						install
 keyboard-configuration				install
@@ -403,6 +408,7 @@ libjack-jackd2-0:amd64				install
 libjasper1:amd64				install
 libjbig0:amd64					install
 libjbig2dec0					install
+libjim0.75:amd64				install
 libjpeg62-turbo:amd64				install
 libjs-jquery					install
 libjs-sphinxdoc					install
@@ -440,6 +446,9 @@ liblzma5:amd64					install
 liblzo2-2:amd64					install
 libmagic1:amd64					install
 libmailtools-perl				install
+libmbim-glib4:amd64				install
+libmbim-proxy					install
+libmm-glib0:amd64				install
 libmng1:amd64					install
 libmnl0:amd64					install
 libmodule-build-perl				install
@@ -457,11 +466,13 @@ libmtp9:amd64					install
 libncurses5:amd64				install
 libncurses5-dev:amd64				install
 libncursesw5:amd64				install
+libndp0:amd64					install
 libnet-dbus-perl				install
 libnet-http-perl				install
 libnet-smtp-ssl-perl				install
 libnet-ssleay-perl				install
 libnetfilter-acct1:amd64			install
+libnetfilter-conntrack3:amd64			install
 libnettle4:amd64				install
 libnewt0.52:amd64				install
 libnfnetlink0:amd64				install
@@ -469,6 +480,8 @@ libnfsidmap2:amd64				install
 libnl-3-200:amd64				install
 libnl-genl-3-200:amd64				install
 libnl-route-3-200:amd64				install
+libnm-glib4:amd64				install
+libnm-util2:amd64				install
 libnspr4:amd64					install
 libnss3:amd64					install
 libntdb1:amd64					install
@@ -501,6 +514,7 @@ libpcap0.8:amd64				install
 libpci3:amd64					install
 libpciaccess0:amd64				install
 libpcre3:amd64					install
+libpcsclite1:amd64				install
 libperl4-corelibs-perl				install
 libperl5.20					install
 libpipeline1:amd64				install
@@ -526,6 +540,8 @@ libpython-stdlib:amd64				install
 libpython2.7:amd64				install
 libpython2.7-minimal:amd64			install
 libpython2.7-stdlib:amd64			install
+libqmi-glib1:amd64				install
+libqmi-proxy					install
 libqt4-xml:amd64				install
 libqtcore4:amd64				install
 libqtgui4:amd64					install
@@ -589,6 +605,7 @@ libtalloc2:amd64				install
 libtasn1-6:amd64				install
 libtcl8.6:amd64					install
 libtdb1:amd64					install
+libteamdctl0:amd64				install
 libterm-ui-perl					install
 libtevent0:amd64				install
 libtext-charwidth-perl				install
@@ -742,6 +759,7 @@ mawk						install
 mime-support					install
 minicom						install
 mlocate						install
+modemmanager					install
 mount						install
 multiarch-support				install
 mutt						install
@@ -752,6 +770,7 @@ ncurses-term					install
 net-tools					install
 netbase						install
 netcat-traditional				install
+network-manager					install
 nfacct						install
 nfs-common					install
 nitrogen					install
@@ -763,6 +782,7 @@ openssl						install
 os-prober					install
 p11-kit						install
 p11-kit-modules:amd64				install
+p7zip-full					install
 parted						install
 passwd						install
 patch						install
@@ -771,9 +791,11 @@ perl						install
 perl-base					install
 perl-modules					install
 pinentry-gtk2					install
+pkg-mozilla-archive-keyring			install
 policykit-1					install
 policykit-1-gnome				install
 poppler-data					install
+ppp						install
 prerex						install
 procmail					install
 procps						install
@@ -915,6 +937,8 @@ udev						install
 udisks2						install
 unzip						install
 update-inetd					install
+usb-modeswitch					install
+usb-modeswitch-data				install
 usbmuxd						install
 usbutils					install
 util-linux					install
@@ -930,15 +954,18 @@ wamerican					install
 wget						install
 whiptail					install
 whois						install
+wireless-regdb					install
 wireshark					install
 wireshark-common				install
 wngerman					install
+wpasupplicant					install
 x11-apps					install
 x11-common					install
 x11-session-utils				install
 x11-utils					install
 x11-xkb-utils					install
 x11-xserver-utils				install
+xarchiver					install
 xauth						install
 xbitmaps					install
 xdg-user-dirs					install
