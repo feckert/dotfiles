@@ -106,6 +106,8 @@ gcc						install
 gcc-4.8-base:amd64				install
 gcc-4.9						install
 gcc-4.9-base:amd64				install
+gconf-service					install
+gconf2-common					install
 gcr						install
 gdisk						install
 geoip-database					install
@@ -328,6 +330,7 @@ libgc1c2:amd64					install
 libgcc-4.9-dev:amd64				install
 libgcc1:amd64					install
 libgck-1-0:amd64				install
+libgconf-2-4:amd64				install
 libgcr-3-common					install
 libgcr-base-3-1:amd64				install
 libgcr-ui-3-1:amd64				install
@@ -490,8 +493,12 @@ libnfsidmap2:amd64				install
 libnl-3-200:amd64				install
 libnl-genl-3-200:amd64				install
 libnl-route-3-200:amd64				install
+libnm-glib-vpn1:amd64				install
 libnm-glib4:amd64				install
+libnm-gtk-common				install
+libnm-gtk0:amd64				install
 libnm-util2:amd64				install
+libnotify4:amd64				install
 libnspr4:amd64					install
 libnss3:amd64					install
 libntdb1:amd64					install
@@ -771,6 +778,7 @@ mawk						install
 mime-support					install
 minicom						install
 mlocate						install
+mobile-broadband-provider-info			install
 modemmanager					install
 mount						install
 multiarch-support				install
@@ -783,6 +791,7 @@ net-tools					install
 netbase						install
 netcat-traditional				install
 network-manager					install
+network-manager-gnome				install
 nfacct						install
 nfs-common					install
 nitrogen					install
