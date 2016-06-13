@@ -10,14 +10,14 @@ fi
 
 ### initialize X and environment
 xrdb -load $HOME/.Xresources
-xset +fp $HOME/.fonts
+#xset +fp $HOME/.fonts
 xset b off
-xset s noblank
-xset s 300 5
-xset dpms 0 0 600
+#xset s noblank
+#xset s 300 5
+#xset dpms 0 0 600
 
 ### set background and start eyecandy
-setroot --restore
+#setroot --restore
 #xsetroot -solid darkgray
 #xsetroot -solid '#444444'
 #xsetroot -bg '#666666' -fg '#333333' -mod 2 2
@@ -27,13 +27,17 @@ setroot --restore
 #xsnow -norudolf -nosanta -notrees &
 
 ### launch terminal, filemanager daemons and conky
-urxvtd -q -f -o; sleep 2
+#urxvtd -q -f -o; sleep 2
 #thunar --daemon &
 
-# set display view (WORK)
-xrandr --output HDMI1 --mode 1920x1200
-xrandr --output HDMI3 --mode 1920x1200 --right-of HDMI1
+# set display view (WORKi)
+if [ $(hostname) = "dev-feckert" ] ; then
+	xrandr --output HDMI1 --mode 1920x1200
+	xrandr --output HDMI3 --mode 1920x1200 --right-of HDMI1
+fi
 
+# execute ssh-agent
+eval $(ssh-agent)
 
-### execute window manager
+# execute window manager
 exec $(cat $HOME/.config/.wm)
