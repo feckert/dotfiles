@@ -116,6 +116,7 @@ gettext-base					install
 ghostscript					install
 git						install
 git-man						install
+gitk						install
 glib-networking:amd64				install
 glib-networking-common				install
 glib-networking-services			install
