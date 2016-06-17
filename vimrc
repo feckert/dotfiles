@@ -71,7 +71,7 @@ nmap <leader>cb :CtrlPBuffer<CR>
 nmap <leader>bt :enew<CR>
 nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
-nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>bq :bp <BAR> bw #<CR>
 nmap <leader>bl :ls<CR>
 
 " Show Filebrowser
