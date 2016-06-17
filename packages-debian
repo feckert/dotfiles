@@ -176,6 +176,7 @@ iso-codes					install
 ispell						install
 iw						install
 javascript-common				install
+jq						install
 kbd						install
 keyboard-configuration				install
 klibc-utils					install
