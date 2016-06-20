@@ -930,6 +930,7 @@ sed						install
 sensible-utils					install
 sgml-base					install
 shared-mime-info				install
+sshfs						install
 ssl-cert					install
 startpar					install
 subversion					install

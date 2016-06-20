@@ -246,6 +246,7 @@ rsyslog
 rxvt-unicode-256color
 sed
 sensible-utils
+sshfs
 startpar
 subversion
 systemd
