@@ -16,6 +16,7 @@ aspell-de-alt					install
 at						install
 at-spi2-core					install
 autopoint					install
+avahi-daemon					install
 base-files					install
 base-passwd					install
 bash						install
@@ -44,6 +45,16 @@ cpp						install
 cpp-4.9						install
 crda						install
 cron						install
+cups						install
+cups-browsed					install
+cups-client					install
+cups-common					install
+cups-core-drivers				install
+cups-daemon					install
+cups-filters					install
+cups-filters-core-drivers			install
+cups-ppdc					install
+cups-server-common				install
 dash						install
 dbus						install
 dbus-x11					install
@@ -158,6 +169,7 @@ i3status					install
 i965-va-driver:amd64				install
 iceweasel					install
 ifupdown					install
+incron						install
 info						install
 ingerman					install
 init						install
@@ -223,6 +235,7 @@ libauthen-sasl-perl				install
 libavahi-client3:amd64				install
 libavahi-common-data:amd64			install
 libavahi-common3:amd64				install
+libavahi-core7:amd64				install
 libavahi-glib1:amd64				install
 libavc1394-0:amd64				install
 libavcodec56:amd64				install
@@ -270,10 +283,14 @@ libcpan-meta-perl				install
 libcroco3:amd64					install
 libcryptsetup4:amd64				install
 libcups2:amd64					install
+libcupscgi1:amd64				install
 libcupsfilters1:amd64				install
 libcupsimage2:amd64				install
+libcupsmime1:amd64				install
+libcupsppdc1:amd64				install
 libcurl3-gnutls:amd64				install
 libcwidget3:amd64				install
+libdaemon0:amd64				install
 libdata-optlist-perl				install
 libdata-section-perl				install
 libdatrie1:amd64				install
@@ -324,6 +341,7 @@ libfile-which-perl				install
 libflac8:amd64					install
 libfont-afm-perl				install
 libfontconfig1:amd64				install
+libfontembed1:amd64				install
 libfontenc1:amd64				install
 libfreetype6:amd64				install
 libfuse2:amd64					install
@@ -382,6 +400,7 @@ libgtkmm-2.4-1c2a:amd64				install
 libguard-perl					install
 libgudev-1.0-0:amd64				install
 libgusb2:amd64					install
+libgutenprint2					install
 libgxps2:amd64					install
 libharfbuzz-icu0:amd64				install
 libharfbuzz0b:amd64				install
@@ -502,6 +521,7 @@ libnm-gtk0:amd64				install
 libnm-util2:amd64				install
 libnotify4:amd64				install
 libnspr4:amd64					install
+libnss-mdns:amd64				install
 libnss3:amd64					install
 libntdb1:amd64					install
 libogg0:amd64					install
@@ -562,6 +582,7 @@ libpython2.7-minimal:amd64			install
 libpython2.7-stdlib:amd64			install
 libqmi-glib1:amd64				install
 libqmi-proxy					install
+libqpdf13:amd64					install
 libqt4-xml:amd64				install
 libqtcore4:amd64				install
 libqtgui4:amd64					install
@@ -818,8 +839,10 @@ pkg-mozilla-archive-keyring			install
 policykit-1					install
 policykit-1-gnome				install
 poppler-data					install
+poppler-utils					install
 ppp						install
 prerex						install
+printer-driver-gutenprint			install
 procmail					install
 procps						install
 prosper						install
@@ -888,6 +911,7 @@ python-wstools					install
 python-zope.interface				install
 python2.7					install
 python2.7-minimal				install
+qpdf						install
 qtcore4-l10n					install
 quilt						install
 readline-common					install
@@ -906,6 +930,7 @@ sed						install
 sensible-utils					install
 sgml-base					install
 shared-mime-info				install
+ssl-cert					install
 startpar					install
 subversion					install
 suckless-tools					install
