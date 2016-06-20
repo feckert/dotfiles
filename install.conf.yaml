@@ -17,7 +17,8 @@
     ~/.zlogin: zlogin
     ~/.zshrc.local: zshrc.local
     ~/.zshrc.pre: zshrc.pre
-    ~/.packages-debian: packages-debian
+    ~/.packages-debian-all: packages-debian-all
+    ~/.packages-debian-manual: packages-debian-manual
     ~/.irssi: irssi/
     ~/.xinitrc: xinitrc
 - shell:
