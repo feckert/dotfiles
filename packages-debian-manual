@@ -79,6 +79,7 @@ hostname
 i3
 iceweasel
 ifupdown
+incron
 info
 init
 init-system-helpers
