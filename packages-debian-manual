@@ -203,6 +203,7 @@ m4
 make
 man-db
 manpages
+markdown
 mawk
 mime-support
 minicom
