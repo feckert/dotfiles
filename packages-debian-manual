@@ -6,6 +6,7 @@ adduser
 apt
 apt-listchanges
 apt-utils
+apticron
 aptitude
 aptitude-common
 at
@@ -264,10 +265,9 @@ tex4ht
 texinfo
 texlive
 texlive-lang-french
+thunar
 time
 traceroute
-tuxcmd
-tuxcmd-modules
 tzdata
 ucf
 udev

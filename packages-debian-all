@@ -7,6 +7,7 @@ adwaita-icon-theme				install
 apt						install
 apt-listchanges					install
 apt-utils					install
+apticron					install
 aptitude					install
 aptitude-common					install
 aptitude-doc-en					install
@@ -96,6 +97,7 @@ exim4						install
 exim4-base					install
 exim4-config					install
 exim4-daemon-light				install
+exo-utils					install
 fakeroot					install
 file						install
 findutils					install
@@ -326,6 +328,9 @@ libevdocument3-4				install
 libevent-2.0-5:amd64				install
 libevview3-3					install
 libexif12:amd64					install
+libexo-1-0:amd64				install
+libexo-common					install
+libexo-helpers					install
 libexpat1:amd64					install
 libfakeroot:amd64				install
 libfcgi-perl					install
@@ -345,6 +350,8 @@ libfontembed1:amd64				install
 libfontenc1:amd64				install
 libfreetype6:amd64				install
 libfuse2:amd64					install
+libgarcon-1-0					install
+libgarcon-common				install
 libgbm1:amd64					install
 libgc1c2:amd64					install
 libgcc-4.9-dev:amd64				install
@@ -659,6 +666,7 @@ libtext-wrapi18n-perl				install
 libthai-data					install
 libthai0:amd64					install
 libtheora0:amd64				install
+libthunarx-2-0					install
 libtie-ixhash-perl				install
 libtiff5:amd64					install
 libtimedate-perl				install
@@ -668,6 +676,7 @@ libtirpc1:amd64					install
 libtk8.6:amd64					install
 libtokyocabinet9:amd64				install
 libtsan0:amd64					install
+libtumbler-1-0					install
 libtxc-dxtn-s2tc0:amd64				install
 libubsan0:amd64					install
 libudev1:amd64					install
@@ -702,6 +711,8 @@ libwebpmux1:amd64				install
 libwireshark-data				install
 libwireshark5:amd64				install
 libwiretap4:amd64				install
+libwnck-common					install
+libwnck22					install
 libwrap0:amd64					install
 libwsutil4:amd64				install
 libwww-perl					install
@@ -741,6 +752,11 @@ libxdamage1:amd64				install
 libxdg-basedir1					install
 libxdmcp6:amd64					install
 libxext6:amd64					install
+libxfce4ui-1-0					install
+libxfce4util-bin				install
+libxfce4util-common				install
+libxfce4util6					install
+libxfconf-0-2					install
 libxfixes3:amd64				install
 libxfont1:amd64					install
 libxft2:amd64					install
@@ -763,6 +779,7 @@ libxmuu1:amd64					install
 libxpm4:amd64					install
 libxrandr2:amd64				install
 libxrender1:amd64				install
+libxres1:amd64					install
 libxshmfence1:amd64				install
 libxslt1.1:amd64				install
 libxss1:amd64					install
@@ -971,6 +988,9 @@ texlive-pictures				install
 texlive-pictures-doc				install
 texlive-pstricks				install
 texlive-pstricks-doc				install
+thunar						install
+thunar-data					install
+thunar-volman					install
 time						install
 tipa						install
 tk						install
@@ -979,8 +999,8 @@ traceroute					install
 ttf-dejavu					install
 ttf-dejavu-core					install
 ttf-dejavu-extra				install
-tuxcmd						install
-tuxcmd-modules					install
+tumbler						install
+tumbler-common					install
 tzdata						install
 ucf						install
 udev						install
@@ -1020,6 +1040,9 @@ xauth						install
 xbitmaps					install
 xdg-user-dirs					install
 xdg-utils					install
+xfce-keyboard-shortcuts				install
+xfce4-panel					install
+xfconf						install
 xfonts-100dpi					install
 xfonts-75dpi					install
 xfonts-base					install
