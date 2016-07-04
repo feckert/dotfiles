@@ -132,6 +132,7 @@ libgnutls-deb0-28
 libgnutls-openssl27
 libgpg-error0
 libhogweed2
+libhunspell-1.3-0
 libicu52
 libidn11
 libirs-export91
@@ -225,13 +226,16 @@ nfacct
 nfs-common
 nitrogen
 openssh-client
+pandoc
 passwd
 patch
 pciutils
+pdftk
 perl
 perl-base
 perl-modules
 pkg-mozilla-archive-keyring
+poedit
 procmail
 procps
 python
@@ -246,6 +250,7 @@ reportbug
 rpcbind
 rsyslog
 rxvt-unicode-256color
+samba
 sed
 sensible-utils
 sshfs
@@ -266,6 +271,7 @@ texinfo
 texlive
 texlive-lang-french
 thunar
+thunar-archive-plugin
 time
 traceroute
 tzdata
