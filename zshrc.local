@@ -1,3 +1,6 @@
 autoload -Uz promptinit
 promptinit
 prompt grml
+
+export PATH=/home/feckert/bin:$PATH
+
