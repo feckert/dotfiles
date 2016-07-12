@@ -1032,6 +1032,7 @@ texlive-pictures				install
 texlive-pictures-doc				install
 texlive-pstricks				install
 texlive-pstricks-doc				install
+tftpd-hpa					install
 thunar						install
 thunar-archive-plugin				install
 thunar-data					install
