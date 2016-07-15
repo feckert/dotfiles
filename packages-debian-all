@@ -117,6 +117,7 @@ ftp						install
 fuse						install
 g++						install
 g++-4.9						install
+galculator					install
 gawk						install
 gcc						install
 gcc-4.8-base:amd64				install
