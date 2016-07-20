@@ -110,6 +110,7 @@ fonts-dejavu					install
 fonts-dejavu-core				install
 fonts-dejavu-extra				install
 fonts-droid					install
+fonts-liberation				install
 fonts-lmodern					install
 fonts-texgyre					install
 fonts-vlgothic					install
@@ -145,6 +146,7 @@ gnupg						install
 gnupg-agent					install
 gnupg2						install
 gpgv						install
+graphviz					install
 grep						install
 groff-base					install
 grub-common					install
@@ -280,8 +282,10 @@ libcdio-cdda1					install
 libcdio-paranoia1				install
 libcdio13					install
 libcdparanoia0:amd64				install
+libcdt5						install
 libcgi-fast-perl				install
 libcgi-pm-perl					install
+libcgraph6					install
 libcilkrts5:amd64				install
 libclass-accessor-perl				install
 libclass-c3-perl				install
@@ -426,6 +430,8 @@ libguard-perl					install
 libgudev-1.0-0:amd64				install
 libgusb2:amd64					install
 libgutenprint2					install
+libgvc6						install
+libgvpr2					install
 libgxps2:amd64					install
 libharfbuzz-icu0:amd64				install
 libharfbuzz0b:amd64				install
@@ -581,6 +587,7 @@ libpaper1:amd64					install
 libparams-util-perl				install
 libparse-debianchangelog-perl			install
 libparted2:amd64				install
+libpathplan4					install
 libpcap0.8:amd64				install
 libpci3:amd64					install
 libpciaccess0:amd64				install
@@ -780,6 +787,7 @@ libxcursor1:amd64				install
 libxdamage1:amd64				install
 libxdg-basedir1					install
 libxdmcp6:amd64					install
+libxdot4					install
 libxext6:amd64					install
 libxfce4ui-1-0					install
 libxfce4util-bin				install

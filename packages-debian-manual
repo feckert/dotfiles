@@ -69,6 +69,7 @@ git
 gitk
 gnupg
 gpgv
+graphviz
 grep
 groff-base
 grub-common
