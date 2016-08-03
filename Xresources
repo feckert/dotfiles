@@ -5,6 +5,7 @@ URxvt.fading: 40
 URxvt.scrollBar: false
 URxvt.foreground: white
 URxvt.background: black
+URxvt*termName: rxvt
 
 URxvt.secondaryScroll: true
 URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12
