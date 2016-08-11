@@ -6,6 +6,7 @@ use strict;
 use warnings;
 
 use Getopt::Long;
+use HTML::Entities;
 
 my %opt = (
     tables => 'filter',
@@ -23,7 +24,8 @@ my %jumps;
 my $last_table = '';
 
 while (<>) {
-    read_iptables_line($_);
+    my $line = encode_entities($_);
+    read_iptables_line($line);
 }
 
 print dot_graph(split ',', $opt{tables});
