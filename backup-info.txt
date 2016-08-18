@@ -1,5 +1,5 @@
 #Install all packages
-sudo aptitude install $(cat ~/.packages-debian-all | awk '{print $1}')
+sudo aptitude install $(cat ~/.packages-debian-manual | awk '{print $1}')
 dpkg --get-selections > ~/.packages-debian-all
 
 #Install manual packages
