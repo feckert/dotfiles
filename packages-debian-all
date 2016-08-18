@@ -117,9 +117,6 @@ firebird2.5-common				install
 firebird2.5-common-doc				install
 firebird2.5-server-common			install
 firefox						install
-firefox-esr					install
-firefox-esr-l10n-de				install
-firefox-l10n-de					install
 fontconfig					install
 fontconfig-config				install
 fonts-dejavu					install
@@ -199,7 +196,7 @@ i3-wm						install
 i3lock						install
 i3status					install
 i965-va-driver:amd64				install
-iceweasel					install
+iceweasel					deinstall
 ifupdown					install
 incron						install
 info						install
