@@ -56,6 +56,7 @@ exim4
 exim4-base
 exim4-config
 exim4-daemon-light
+ferm
 file
 findutils
 ftp
@@ -181,6 +182,7 @@ libpipeline1
 libpopt0
 libprocps3
 libpsl0
+libreadline-dev
 libreadline6
 libreoffice
 libreoffice-l10n-de
