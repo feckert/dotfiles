@@ -111,6 +111,7 @@ exim4-config					install
 exim4-daemon-light				install
 exo-utils					install
 fakeroot					install
+ferm						install
 file						install
 findutils					install
 firebird2.5-common				install
@@ -173,7 +174,6 @@ grub-pc-bin					install
 grub2-common					install
 gsettings-desktop-schemas			install
 gsfonts						install
-gstreamer1.0-libav:amd64			install
 gstreamer1.0-plugins-base:amd64			install
 gstreamer1.0-plugins-good:amd64			install
 gstreamer1.0-x:amd64				install
@@ -195,7 +195,6 @@ i3						install
 i3-wm						install
 i3lock						install
 i3status					install
-i965-va-driver:amd64				install
 iceweasel					deinstall
 ifupdown					install
 incron						install
@@ -274,10 +273,10 @@ libavahi-common3:amd64				install
 libavahi-core7:amd64				install
 libavahi-glib1:amd64				install
 libavc1394-0:amd64				install
-libavcodec56:amd64				install
-libavformat56:amd64				install
-libavresample2:amd64				install
-libavutil54:amd64				install
+libavcodec56:amd64				deinstall
+libavformat56:amd64				deinstall
+libavresample2:amd64				deinstall
+libavutil54:amd64				deinstall
 libbind9-90					install
 libblas-common					install
 libblas3					install
@@ -354,6 +353,7 @@ libdbus-glib-1-2:amd64				install
 libdconf1:amd64					install
 libdebconfclient0:amd64				install
 libdevmapper1.02.1:amd64			install
+libdigest-hmac-perl				install
 libdiscover2					install
 libdjvulibre-text				install
 libdjvulibre21:amd64				install
@@ -468,7 +468,7 @@ libgpm2:amd64					install
 libgraphite2-3:amd64				install
 libgs9						install
 libgs9-common					install
-libgsm1:amd64					install
+libgsm1:amd64					deinstall
 libgssapi-krb5-2:amd64				install
 libgstreamer-plugins-base1.0-0:amd64		install
 libgstreamer1.0-0:amd64				install
@@ -516,6 +516,7 @@ libijs-0.35:amd64				install
 libimobiledevice4:amd64				install
 libintl-perl					install
 libio-html-perl					install
+libio-socket-inet6-perl				install
 libio-socket-ip-perl				install
 libio-socket-ssl-perl				install
 libio-string-perl				install
@@ -586,7 +587,7 @@ libmodule-build-perl				install
 libmodule-pluggable-perl			install
 libmodule-signature-perl			install
 libmount1:amd64					install
-libmp3lame0:amd64				install
+libmp3lame0:amd64				deinstall
 libmpc3:amd64					install
 libmpdec2:amd64					install
 libmpfr4:amd64					install
@@ -605,7 +606,9 @@ libncursesw5:amd64				install
 libndp0:amd64					install
 libneon27-gnutls				install
 libnet-dbus-perl				install
+libnet-dns-perl					install
 libnet-http-perl				install
+libnet-ip-perl					install
 libnet-smtp-ssl-perl				install
 libnet-ssleay-perl				install
 libnetfilter-acct1:amd64			install
@@ -703,7 +706,9 @@ libraptor2-0:amd64				install
 librasqal3:amd64				install
 libraw1394-11:amd64				install
 librdf0:amd64					install
+libreadline-dev:amd64				install
 libreadline6:amd64				install
+libreadline6-dev:amd64				install
 libregexp-common-perl				install
 libreoffice					install
 libreoffice-avmedia-backend-gstreamer		install
@@ -738,7 +743,7 @@ libsane-extras-common				install
 libsasl2-2:amd64				install
 libsasl2-modules:amd64				install
 libsasl2-modules-db:amd64			install
-libschroedinger-1.0-0:amd64			install
+libschroedinger-1.0-0:amd64			deinstall
 libsctp1:amd64					install
 libsecret-1-0:amd64				install
 libsecret-common				install
@@ -757,6 +762,7 @@ libsmartcols1:amd64				install
 libsmbclient:amd64				install
 libsmi2ldbl:amd64				install
 libsndfile1:amd64				install
+libsocket6-perl					install
 libsoftware-license-perl			install
 libsoup-gnome2.4-1:amd64			install
 libsoup2.4-1:amd64				install
@@ -823,8 +829,8 @@ libuuid-perl					install
 libuuid1:amd64					install
 libv4l-0:amd64					install
 libv4lconvert0:amd64				install
-libva1:amd64					install
-libvdpau1:amd64					install
+libva1:amd64					deinstall
+libvdpau1:amd64					deinstall
 libvisio-0.1-1					install
 libvisual-0.4-0:amd64				install
 libvisual-0.4-plugins:amd64			install
@@ -860,7 +866,7 @@ libx11-6:amd64					install
 libx11-data					install
 libx11-protocol-perl				install
 libx11-xcb1:amd64				install
-libx264-142:amd64				install
+libx264-142:amd64				deinstall
 libxapian22					install
 libxatracker2:amd64				install
 libxau6:amd64					install
@@ -927,7 +933,7 @@ libxt6:amd64					install
 libxtables10					install
 libxtst6:amd64					install
 libxv1:amd64					install
-libxvidcore4:amd64				install
+libxvidcore4:amd64				deinstall
 libxvmc1:amd64					install
 libxxf86dga1:amd64				install
 libxxf86vm1:amd64				install
@@ -1182,8 +1188,6 @@ usb-modeswitch-data				install
 usbmuxd						install
 usbutils					install
 util-linux					install
-va-driver-all:amd64				install
-vdpau-va-driver:amd64				install
 vim						install
 vim-common					install
 vim-runtime					install
