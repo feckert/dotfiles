@@ -15,3 +15,7 @@ xrandr --output HDMI3 --mode 1920x1200 --right-of HDMI1
 # Add user to wireshark group to capture frames
 usermod -a -G wireshark $USER
 
+# Change default shell
+chsh
+
+# add share fstab
