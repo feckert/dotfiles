@@ -67,6 +67,7 @@ gcc-4.9-base
 gconf2
 gettext
 gettext-base
+gimp
 git
 gitk
 gnome-mime-data

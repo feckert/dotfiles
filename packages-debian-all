@@ -151,6 +151,8 @@ geoip-database					install
 gettext						install
 gettext-base					install
 ghostscript					install
+gimp						install
+gimp-data					install
 git						install
 git-man						install
 gitk						install
@@ -195,6 +197,7 @@ i3						install
 i3-wm						install
 i3lock						install
 i3status					install
+i965-va-driver:amd64				install
 iceweasel					deinstall
 ifupdown					install
 incron						install
@@ -235,6 +238,7 @@ libalgorithm-c3-perl				install
 libalgorithm-diff-perl				install
 libalgorithm-diff-xs-perl			install
 libalgorithm-merge-perl				install
+libamd2.3.1:amd64				install
 libanyevent-i3-perl				install
 libanyevent-perl				install
 libapr1:amd64					install
@@ -273,10 +277,11 @@ libavahi-common3:amd64				install
 libavahi-core7:amd64				install
 libavahi-glib1:amd64				install
 libavc1394-0:amd64				install
-libavcodec56:amd64				deinstall
-libavformat56:amd64				deinstall
-libavresample2:amd64				deinstall
-libavutil54:amd64				deinstall
+libavcodec56:amd64				install
+libavformat56:amd64				install
+libavresample2:amd64				install
+libavutil54:amd64				install
+libbabl-0.1-0:amd64				install
 libbind9-90					install
 libblas-common					install
 libblas3					install
@@ -302,10 +307,12 @@ libcaca0:amd64					install
 libcairo-gobject2:amd64				install
 libcairo2:amd64					install
 libcairomm-1.0-1				install
+libcamd2.3.1:amd64				install
 libcanberra0:amd64				install
 libcap-ng0:amd64				install
 libcap2:amd64					install
 libcap2-bin					install
+libccolamd2.8.0:amd64				install
 libcdio-cdda1					install
 libcdio-paranoia1				install
 libcdio13					install
@@ -315,6 +322,7 @@ libcdt5						install
 libcgi-fast-perl				install
 libcgi-pm-perl					install
 libcgraph6					install
+libcholmod2.1.2:amd64				install
 libcilkrts5:amd64				install
 libclass-accessor-perl				install
 libclass-c3-perl				install
@@ -354,6 +362,7 @@ libdconf1:amd64					install
 libdebconfclient0:amd64				install
 libdevmapper1.02.1:amd64			install
 libdigest-hmac-perl				install
+libdirectfb-1.2-9:amd64				install
 libdiscover2					install
 libdjvulibre-text				install
 libdjvulibre21:amd64				install
@@ -430,11 +439,13 @@ libgd3:amd64					install
 libgdbm3:amd64					install
 libgdk-pixbuf2.0-0:amd64			install
 libgdk-pixbuf2.0-common				install
+libgegl-0.2-0:amd64				install
 libgeoip1:amd64					install
 libgettextpo-dev:amd64				install
 libgettextpo0:amd64				install
 libgfortran3:amd64				install
 libgif4:amd64					install
+libgimp2.0					install
 libgl1-mesa-dri:amd64				install
 libgl1-mesa-glx:amd64				install
 libglapi-mesa:amd64				install
@@ -468,7 +479,7 @@ libgpm2:amd64					install
 libgraphite2-3:amd64				install
 libgs9						install
 libgs9-common					install
-libgsm1:amd64					deinstall
+libgsm1:amd64					install
 libgssapi-krb5-2:amd64				install
 libgstreamer-plugins-base1.0-0:amd64		install
 libgstreamer1.0-0:amd64				install
@@ -513,6 +524,7 @@ libidn11:amd64					install
 libiec61883-0:amd64				install
 libieee1284-3:amd64				install
 libijs-0.35:amd64				install
+libilmbase6:amd64				install
 libimobiledevice4:amd64				install
 libintl-perl					install
 libio-html-perl					install
@@ -587,7 +599,7 @@ libmodule-build-perl				install
 libmodule-pluggable-perl			install
 libmodule-signature-perl			install
 libmount1:amd64					install
-libmp3lame0:amd64				deinstall
+libmp3lame0:amd64				install
 libmpc3:amd64					install
 libmpdec2:amd64					install
 libmpfr4:amd64					install
@@ -632,7 +644,9 @@ libnss3:amd64					install
 libntdb1:amd64					install
 libodfgen-0.1-1					install
 libogg0:amd64					install
+libopenexr6:amd64				install
 libopenjpeg5:amd64				install
+libopenraw1:amd64				install
 libopenvg1-mesa:amd64				install
 libopus0:amd64					install
 liborbit-2-0:amd64				install
@@ -743,8 +757,9 @@ libsane-extras-common				install
 libsasl2-2:amd64				install
 libsasl2-modules:amd64				install
 libsasl2-modules-db:amd64			install
-libschroedinger-1.0-0:amd64			deinstall
+libschroedinger-1.0-0:amd64			install
 libsctp1:amd64					install
+libsdl1.2debian:amd64				install
 libsecret-1-0:amd64				install
 libsecret-common				install
 libselinux1:amd64				install
@@ -818,6 +833,7 @@ libtxc-dxtn-s2tc0:amd64				install
 libubsan0:amd64					install
 libudev1:amd64					install
 libudisks2-0:amd64				install
+libumfpack5.6.2:amd64				install
 libunistring0:amd64				install
 liburi-perl					install
 libusb-0.1-4:amd64				install
@@ -829,8 +845,8 @@ libuuid-perl					install
 libuuid1:amd64					install
 libv4l-0:amd64					install
 libv4lconvert0:amd64				install
-libva1:amd64					deinstall
-libvdpau1:amd64					deinstall
+libva1:amd64					install
+libvdpau1:amd64					install
 libvisio-0.1-1					install
 libvisual-0.4-0:amd64				install
 libvisual-0.4-plugins:amd64			install
@@ -851,6 +867,7 @@ libwind0-heimdal:amd64				install
 libwireshark-data				install
 libwireshark5:amd64				install
 libwiretap4:amd64				install
+libwmf0.2-7:amd64				install
 libwnck-common					install
 libwnck22					install
 libwpd-0.10-10					install
@@ -866,7 +883,7 @@ libx11-6:amd64					install
 libx11-data					install
 libx11-protocol-perl				install
 libx11-xcb1:amd64				install
-libx264-142:amd64				deinstall
+libx264-142:amd64				install
 libxapian22					install
 libxatracker2:amd64				install
 libxau6:amd64					install
@@ -933,7 +950,7 @@ libxt6:amd64					install
 libxtables10					install
 libxtst6:amd64					install
 libxv1:amd64					install
-libxvidcore4:amd64				deinstall
+libxvidcore4:amd64				install
 libxvmc1:amd64					install
 libxxf86dga1:amd64				install
 libxxf86vm1:amd64				install
@@ -1024,6 +1041,7 @@ psmisc						install
 python						install
 python-apt					install
 python-apt-common				install
+python-cairo					install
 python-cffi					install
 python-characteristic				install
 python-chardet					install
@@ -1038,6 +1056,8 @@ python-defusedxml				install
 python-distlib					install
 python-dnspython				install
 python-docutils					install
+python-gobject-2				install
+python-gtk2					install
 python-html5lib					install
 python-jinja2					install
 python-ldb					install
@@ -1046,6 +1066,7 @@ python-migrate					install
 python-minimal					install
 python-ndg-httpsclient				install
 python-ntdb					install
+python-numpy					install
 python-openssl					install
 python-pam					install
 python-pbr					install
@@ -1188,6 +1209,8 @@ usb-modeswitch-data				install
 usbmuxd						install
 usbutils					install
 util-linux					install
+va-driver-all:amd64				install
+vdpau-va-driver:amd64				install
 vim						install
 vim-common					install
 vim-runtime					install
