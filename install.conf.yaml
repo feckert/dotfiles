@@ -7,6 +7,7 @@
     ~/.inputrc: inputrc
     ~/.i3: i3/
     ~/.config/.wm: config/wm
+    ~/.config/Thunar/uca.xml: config/Thunar/uca.xml
     ~/bin: bin/
     ~/.vimrc: vimrc
     ~/.vim: vim/
@@ -26,4 +27,5 @@
     - mkdir -p ~/.vim/backup
     - mkdir -p ~/.vim/swap
     - mkdir -p ~/.vim/undo
+    - mkdir -p ~/.config/Thunar
 

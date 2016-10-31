@@ -1,0 +1,13 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Terminal hier öffnen</name>
+	<unique-id>1477898180113104-1</unique-id>
+	<command>urxvt -cd %f</command>
+	<description>Beispiel für eine eigene Aktion</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+</actions>
