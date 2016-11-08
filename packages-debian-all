@@ -37,6 +37,7 @@ busybox						install
 bzip2						install
 ca-certificates					install
 ca-certificates-java				install
+catfish						install
 chromium					install
 coinor-libcbc3					install
 coinor-libcgl1					install
@@ -153,6 +154,12 @@ gettext-base					install
 ghostscript					install
 gimp						install
 gimp-data					install
+gir1.2-atk-1.0					install
+gir1.2-freedesktop:amd64			install
+gir1.2-gdkpixbuf-2.0				install
+gir1.2-glib-2.0:amd64				install
+gir1.2-gtk-3.0:amd64				install
+gir1.2-pango-1.0:amd64				install
 git						install
 git-man						install
 gitk						install
@@ -446,6 +453,7 @@ libgettextpo0:amd64				install
 libgfortran3:amd64				install
 libgif4:amd64					install
 libgimp2.0					install
+libgirepository-1.0-1:amd64			install
 libgl1-mesa-dri:amd64				install
 libgl1-mesa-glx:amd64				install
 libglapi-mesa:amd64				install
@@ -648,6 +656,7 @@ libopenexr6:amd64				install
 libopenjpeg5:amd64				install
 libopenraw1:amd64				install
 libopenvg1-mesa:amd64				install
+libopts25:amd64					install
 libopus0:amd64					install
 liborbit-2-0:amd64				install
 liborc-0.4-0:amd64				install
@@ -1002,6 +1011,7 @@ nfacct						install
 nfs-common					install
 nitrogen					install
 ntfs-3g						install
+ntp						install
 openjdk-7-jre:amd64				install
 openjdk-7-jre-headless:amd64			install
 openssh-client					install
@@ -1111,7 +1121,11 @@ python-zope.interface				install
 python2.7					install
 python2.7-minimal				install
 python3						install
+python3-cairo					install
+python3-gi					install
+python3-gi-cairo				install
 python3-minimal					install
+python3-pexpect					install
 python3-uno					install
 python3.4					install
 python3.4-minimal				install
@@ -1180,6 +1194,7 @@ texlive-pictures				install
 texlive-pictures-doc				install
 texlive-pstricks				install
 texlive-pstricks-doc				install
+tftp						install
 tftpd-hpa					install
 thunar						install
 thunar-archive-plugin				install

@@ -24,6 +24,7 @@ build-essential
 buildbot
 busybox
 bzip2
+catfish
 chromium
 console-setup
 coreutils
@@ -243,6 +244,7 @@ network-manager-gnome
 nfacct
 nfs-common
 nitrogen
+ntp
 openssh-client
 pandoc
 passwd
@@ -288,6 +290,7 @@ tex4ht
 texinfo
 texlive
 texlive-lang-french
+tftp
 tftpd-hpa
 thunar
 thunar-archive-plugin
