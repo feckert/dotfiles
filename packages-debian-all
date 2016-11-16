@@ -52,6 +52,7 @@ console-setup-linux				install
 coreutils					install
 cpio						install
 cpp						install
+cpp-4.8						install
 cpp-4.9						install
 crda						install
 cron						install
@@ -85,6 +86,7 @@ diffstat					install
 diffutils					install
 discover					install
 discover-data					install
+dkms						install
 dmidecode					install
 dmsetup						install
 dns-root-data					install
@@ -139,6 +141,7 @@ g++-4.9						install
 galculator					install
 gawk						install
 gcc						install
+gcc-4.8						install
 gcc-4.8-base:amd64				install
 gcc-4.9						install
 gcc-4.9-base:amd64				install
@@ -254,6 +257,7 @@ libapt-inst1.5:amd64				install
 libapt-pkg4.12:amd64				install
 libarchive-extract-perl				install
 libarchive13:amd64				install
+libasan0:amd64					install
 libasan1:amd64					install
 libasn1-8-heimdal:amd64				install
 libasound2:amd64				install
@@ -431,6 +435,7 @@ libgarcon-1-0					install
 libgarcon-common				install
 libgbm1:amd64					install
 libgc1c2:amd64					install
+libgcc-4.8-dev:amd64				install
 libgcc-4.9-dev:amd64				install
 libgcc1:amd64					install
 libgcj-common					install
@@ -488,6 +493,7 @@ libgraphite2-3:amd64				install
 libgs9						install
 libgs9-common					install
 libgsm1:amd64					install
+libgsoap5:amd64					install
 libgssapi-krb5-2:amd64				install
 libgstreamer-plugins-base1.0-0:amd64		install
 libgstreamer1.0-0:amd64				install
@@ -721,8 +727,11 @@ libpython3.4-stdlib:amd64			install
 libqmi-glib1:amd64				install
 libqmi-proxy					install
 libqpdf13:amd64					install
+libqt4-network:amd64				install
+libqt4-opengl:amd64				install
 libqt4-xml:amd64				install
 libqtcore4:amd64				install
+libqtdbus4:amd64				install
 libqtgui4:amd64					install
 libquadmath0:amd64				install
 libraptor2-0:amd64				install
@@ -859,6 +868,7 @@ libvdpau1:amd64					install
 libvisio-0.1-1					install
 libvisual-0.4-0:amd64				install
 libvisual-0.4-plugins:amd64			install
+libvncserver0:amd64				install
 libvorbis0a:amd64				install
 libvorbisenc2:amd64				install
 libvorbisfile3:amd64				install
@@ -968,8 +978,13 @@ libyaml-0-2:amd64				install
 libyaml-tiny-perl				install
 libzzip-0-13:amd64				install
 linux-base					install
+linux-compiler-gcc-4.8-x86			install
+linux-headers-3.16.0-4-amd64			install
+linux-headers-3.16.0-4-common			install
+linux-headers-amd64				install
 linux-image-3.16.0-4-amd64			install
 linux-image-amd64				install
+linux-kbuild-3.16				install
 linux-libc-dev:amd64				install
 lksctp-tools					install
 lmodern						install
@@ -990,6 +1005,7 @@ manpages-de					install
 manpages-dev					install
 markdown					install
 mawk						install
+menu						install
 mime-support					install
 minicom						install
 mlocate						install
@@ -1153,6 +1169,7 @@ sed						install
 sensible-utils					install
 sgml-base					install
 shared-mime-info				install
+shellcheck					install
 sshfs						install
 ssl-cert					install
 startpar					install
@@ -1230,6 +1247,9 @@ vim						install
 vim-common					install
 vim-runtime					install
 vim-tiny					install
+virtualbox					install
+virtualbox-dkms					install
+virtualbox-qt					install
 vprerex						install
 w3m						install
 wamerican					install

@@ -273,6 +273,7 @@ rxvt-unicode-256color
 samba
 sed
 sensible-utils
+shellcheck
 sshfs
 startpar
 subversion
@@ -306,6 +307,7 @@ vim
 vim-common
 vim-runtime
 vim-tiny
+virtualbox
 w3m
 wamerican
 wget
