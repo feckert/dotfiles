@@ -387,3 +387,8 @@ settings = {
   };
   "fe-text" = { actlist_sort = "refnum"; };
 };
+ignores = (
+  { mask = "channels"; level = "ALL"; },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#lede-dev" ); },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#debian.de" ); }
+);
