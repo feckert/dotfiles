@@ -21,7 +21,7 @@
     ~/.packages-debian-all: packages-debian-all
     ~/.packages-debian-manual: packages-debian-manual
     ~/.irssi: irssi/
-    ~/.xinitrc: xinitrc
+    ~/.xsession: xsession
 - shell:
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/backup
