@@ -70,6 +70,7 @@ gettext
 gettext-base
 gimp
 git
+git-email
 gitk
 gnome-mime-data
 gnupg

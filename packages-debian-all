@@ -164,6 +164,7 @@ gir1.2-glib-2.0:amd64				install
 gir1.2-gtk-3.0:amd64				install
 gir1.2-pango-1.0:amd64				install
 git						install
+git-email					install
 git-man						install
 gitk						install
 glib-networking:amd64				install
@@ -390,6 +391,7 @@ libedit2:amd64					install
 libegl1-mesa:amd64				install
 libegl1-mesa-drivers:amd64			install
 libelf1:amd64					install
+libemail-valid-perl				install
 libenchant1c2a:amd64				install
 libencode-locale-perl				install
 libeot0						install
@@ -633,6 +635,7 @@ libndp0:amd64					install
 libneon27-gnutls				install
 libnet-dbus-perl				install
 libnet-dns-perl					install
+libnet-domain-tld-perl				install
 libnet-http-perl				install
 libnet-ip-perl					install
 libnet-smtp-ssl-perl				install
