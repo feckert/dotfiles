@@ -160,31 +160,31 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        position top
-#        status_command i3status
-#}
-
 bar {
-    output            LVDS1
-    status_command    i3status
-    position          top
-    mode              hide
-    workspace_buttons yes
-    tray_output       none
-
-    font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-
-    colors {
-        background #000000
-        statusline #ffffff
-
-        focused_workspace  #ffffff #285577
-        active_workspace   #ffffff #333333
-        inactive_workspace #888888 #222222
-        urgent_workspace   #ffffff #900000
-    }
+        position top
+        status_command i3status
 }
+
+#bar {
+#    output            LVDS1
+#    status_command    i3status
+#    position          top
+#    mode              hide
+#    workspace_buttons yes
+#    tray_output       none
+#
+#    font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#
+#    colors {
+#        background #000000
+#        statusline #ffffff
+#
+#        focused_workspace  #ffffff #285577
+#        active_workspace   #ffffff #333333
+#        inactive_workspace #888888 #222222
+#        urgent_workspace   #ffffff #900000
+#    }
+#}
 
 
 # Start network manager
@@ -199,7 +199,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle
 bindsym $mod+Shift+T border 1pixel
 
 # Restor Background images
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id nitrogen --restore ~/Wallpaper
 
 # shutdown
 set $Locker i3lock && sleep 1
