@@ -1288,6 +1288,7 @@ x11-xserver-utils				install
 xarchiver					install
 xauth						install
 xbitmaps					install
+xclip						install
 xdg-user-dirs					install
 xdg-utils					install
 xfce-keyboard-shortcuts				install
