@@ -17,7 +17,10 @@ aspell-de-alt					install
 at						install
 at-spi2-core					install
 attr						install
+autoconf					install
+automake					install
 autopoint					install
+autotools-dev					install
 avahi-daemon					install
 base-files					install
 base-passwd					install
@@ -26,6 +29,7 @@ bash-completion					install
 bc						install
 bind9-host					install
 binutils					install
+bison						install
 bsd-mailx					install
 bsdiff						install
 bsdmainutils					install
@@ -121,6 +125,8 @@ firebird2.5-common				install
 firebird2.5-common-doc				install
 firebird2.5-server-common			install
 firefox						install
+flashrom					install
+flex						install
 fontconfig					install
 fontconfig-config				install
 fonts-dejavu					install
@@ -177,6 +183,7 @@ gnome-mime-data					install
 gnupg						install
 gnupg-agent					install
 gnupg2						install
+gparted						install
 gpgv						install
 graphviz					install
 grep						install
@@ -295,6 +302,7 @@ libavresample2:amd64				install
 libavutil54:amd64				install
 libbabl-0.1-0:amd64				install
 libbind9-90					install
+libbison-dev:amd64				install
 libblas-common					install
 libblas3					install
 libblkid1:amd64					install
@@ -425,6 +433,7 @@ libfile-homedir-perl				install
 libfile-listing-perl				install
 libfile-mimeinfo-perl				install
 libfile-which-perl				install
+libfl-dev:amd64					install
 libflac8:amd64					install
 libfont-afm-perl				install
 libfontconfig1:amd64				install
@@ -432,6 +441,7 @@ libfontembed1:amd64				install
 libfontenc1:amd64				install
 libfreehand-0.1-1				install
 libfreetype6:amd64				install
+libftdi1:amd64					install
 libfuse2:amd64					install
 libgarcon-1-0					install
 libgarcon-common				install
@@ -454,6 +464,7 @@ libgdbm3:amd64					install
 libgdk-pixbuf2.0-0:amd64			install
 libgdk-pixbuf2.0-common				install
 libgegl-0.2-0:amd64				install
+libgenders0:amd64				install
 libgeoip1:amd64					install
 libgettextpo-dev:amd64				install
 libgettextpo0:amd64				install
@@ -594,6 +605,7 @@ liblog-message-simple-perl			install
 liblogging-stdlog0:amd64			install
 liblognorm1:amd64				install
 liblsan0:amd64					install
+libltdl-dev:amd64				install
 libltdl7:amd64					install
 liblua5.1-0:amd64				install
 liblua5.2-0:amd64				install
@@ -689,6 +701,7 @@ libpaper-utils					install
 libpaper1:amd64					install
 libparams-util-perl				install
 libparse-debianchangelog-perl			install
+libparted-fs-resize0:amd64			install
 libparted2:amd64				install
 libpathplan4					install
 libpcap0.8:amd64				install
@@ -803,7 +816,7 @@ libsoftware-license-perl			install
 libsoup-gnome2.4-1:amd64			install
 libsoup2.4-1:amd64				install
 libspectre1:amd64				install
-libspeechd2:amd64				install
+libspeechd2:amd64				deinstall
 libspeex1:amd64					install
 libsqlite3-0:amd64				install
 libss2:amd64					install
@@ -848,6 +861,7 @@ libtinfo5:amd64					install
 libtirpc1:amd64					install
 libtk8.6:amd64					install
 libtokyocabinet9:amd64				install
+libtool						install
 libtsan0:amd64					install
 libtumbler-1-0					install
 libtxc-dxtn-s2tc0:amd64				install
@@ -1059,6 +1073,7 @@ policykit-1					install
 policykit-1-gnome				install
 poppler-data					install
 poppler-utils					install
+powerman					install
 ppp						install
 prerex						install
 printer-driver-gutenprint			install
