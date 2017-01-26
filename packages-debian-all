@@ -1294,6 +1294,7 @@ x11-xkb-utils					install
 x11-xserver-utils				install
 xarchiver					install
 xauth						install
+xautolock					install
 xbitmaps					install
 xclip						install
 xdg-user-dirs					install
@@ -1343,6 +1344,7 @@ xserver-xorg-video-trident			install
 xserver-xorg-video-vesa				install
 xserver-xorg-video-vmware			install
 xterm						install
+xtrlock						install
 xz-utils					install
 zip						install
 zlib1g:amd64					install
