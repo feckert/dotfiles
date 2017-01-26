@@ -201,7 +201,7 @@ bindsym $mod+Shift+T border 1pixel
 exec --no-startup-id nitrogen --restore ~/Wallpaper
 
 # Autolock screen
-exec xautolock -time 1 -locker "~/bin/fuzzy_lock.sh" &
+exec xautolock -time 5 -locker "~/bin/fuzzy_lock.sh" &
 
 # Display shutdown selection
 set $Locker i3lock && sleep 1
