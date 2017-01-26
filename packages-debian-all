@@ -161,6 +161,7 @@ geoip-database					install
 gettext						install
 gettext-base					install
 ghostscript					install
+giblib1:amd64					install
 gimp						install
 gimp-data					install
 gir1.2-atk-1.0					install
@@ -547,11 +548,13 @@ libhx509-5-heimdal:amd64			install
 libhyphen0					install
 libice6:amd64					install
 libicu52:amd64					install
+libid3tag0					install
 libidn11:amd64					install
 libiec61883-0:amd64				install
 libieee1284-3:amd64				install
 libijs-0.35:amd64				install
 libilmbase6:amd64				install
+libimlib2					install
 libimobiledevice4:amd64				install
 libintl-perl					install
 libio-html-perl					install
@@ -1183,6 +1186,7 @@ samba-dsdb-modules				install
 samba-libs:amd64				install
 samba-vfs-modules				install
 sane-utils					install
+scrot						install
 sed						install
 sensible-utils					install
 sgml-base					install
