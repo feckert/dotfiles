@@ -186,6 +186,8 @@ gnupg-agent					install
 gnupg2						install
 gparted						install
 gpgv						install
+graphicsmagick					install
+graphicsmagick-imagemagick-compat		install
 graphviz					install
 grep						install
 groff-base					install
@@ -503,6 +505,7 @@ libgphoto2-6:amd64				install
 libgphoto2-l10n					install
 libgphoto2-port10:amd64				install
 libgpm2:amd64					install
+libgraphicsmagick3				install
 libgraphite2-3:amd64				install
 libgs9						install
 libgs9-common					install
