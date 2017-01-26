@@ -121,13 +121,12 @@ bindsym $mod+minus scratchpad show
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# lock screen
-bindsym $mod+Shift+s exec "i3lock"
+# exit i3 (logs you out of your X session)
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # rename workspace
 bindsym $mod+Shift+y exec i3-input -F 'Rename workspace to "%s"' -P 'New name: '
@@ -201,9 +200,12 @@ bindsym $mod+Shift+T border 1pixel
 # Restor Background images
 exec --no-startup-id nitrogen --restore ~/Wallpaper
 
-# shutdown
+# Autolock screen
+exec xautolock -time 1 -locker "~/bin/fuzzy_lock.sh" &
+
+# Display shutdown selection
 set $Locker i3lock && sleep 1
-set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (e) exit, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
         bindsym l exec --no-startup-id $Locker, mode "default"
         bindsym e exec --no-startup-id i3-msg exit, mode "default"
