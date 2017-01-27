@@ -672,6 +672,7 @@ libnm-glib4:amd64				install
 libnm-gtk-common				install
 libnm-gtk0:amd64				install
 libnm-util2:amd64				install
+libnotify-bin					install
 libnotify4:amd64				install
 libnspr4:amd64					install
 libnss-mdns:amd64				install
@@ -749,11 +750,18 @@ libpython3.4-stdlib:amd64			install
 libqmi-glib1:amd64				install
 libqmi-proxy					install
 libqpdf13:amd64					install
-libqt4-network:amd64				install
-libqt4-opengl:amd64				install
+libqt4-network:amd64				deinstall
+libqt4-opengl:amd64				deinstall
 libqt4-xml:amd64				install
+libqt5core5a:amd64				install
+libqt5dbus5:amd64				install
+libqt5gui5:amd64				install
+libqt5opengl5:amd64				install
+libqt5printsupport5:amd64			install
+libqt5widgets5:amd64				install
+libqt5x11extras5:amd64				install
 libqtcore4:amd64				install
-libqtdbus4:amd64				install
+libqtdbus4:amd64				deinstall
 libqtgui4:amd64					install
 libquadmath0:amd64				install
 libraptor2-0:amd64				install
@@ -1171,6 +1179,7 @@ python3.4					install
 python3.4-minimal				install
 qpdf						install
 qtcore4-l10n					install
+qttranslations5-l10n				install
 quilt						install
 readline-common					install
 rename						install
