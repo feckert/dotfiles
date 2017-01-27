@@ -253,6 +253,7 @@ network-manager-gnome
 nfacct
 nfs-common
 nitrogen
+notify-osd
 ntp
 openssh-client
 pandoc

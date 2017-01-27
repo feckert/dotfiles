@@ -918,6 +918,8 @@ libwireshark-data				install
 libwireshark5:amd64				install
 libwiretap4:amd64				install
 libwmf0.2-7:amd64				install
+libwnck-3-0:amd64				install
+libwnck-3-common				install
 libwnck-common					install
 libwnck22					install
 libwpd-0.10-10					install
@@ -1057,6 +1059,7 @@ network-manager-gnome				install
 nfacct						install
 nfs-common					install
 nitrogen					install
+notify-osd					install
 ntfs-3g						install
 ntp						install
 openjdk-7-jre:amd64				install
