@@ -1022,6 +1022,7 @@ linux-libc-dev:amd64				install
 lksctp-tools					install
 lmodern						install
 locales						install
+lockfile-progs					install
 login						install
 logrotate					install
 lp-solve					install
@@ -1059,9 +1060,9 @@ network-manager-gnome				install
 nfacct						install
 nfs-common					install
 nitrogen					install
-notify-osd					install
 ntfs-3g						install
 ntp						install
+ntpdate						install
 openjdk-7-jre:amd64				install
 openjdk-7-jre-headless:amd64			install
 openssh-client					install
@@ -1254,6 +1255,7 @@ thunar						install
 thunar-archive-plugin				install
 thunar-data					install
 thunar-volman					install
+tig						install
 time						install
 tipa						install
 tk						install

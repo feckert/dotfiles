@@ -221,6 +221,8 @@ libusb-0.1-4
 libustr-1.0-1
 libutempter0
 libuuid1
+libwnck-3-0
+libwnck-3-common
 libxtables10
 linux-image-amd64
 locales
@@ -253,8 +255,8 @@ network-manager-gnome
 nfacct
 nfs-common
 nitrogen
-notify-osd
 ntp
+ntpdate
 openssh-client
 pandoc
 passwd
@@ -307,6 +309,7 @@ tftp
 tftpd-hpa
 thunar
 thunar-archive-plugin
+tig
 time
 traceroute
 tzdata
