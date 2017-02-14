@@ -70,6 +70,7 @@ cups-filters					install
 cups-filters-core-drivers			install
 cups-ppdc					install
 cups-server-common				install
+curl						install
 dash						install
 dbus						install
 dbus-x11					install
@@ -371,6 +372,7 @@ libcupsfilters1:amd64				install
 libcupsimage2:amd64				install
 libcupsmime1:amd64				install
 libcupsppdc1:amd64				install
+libcurl3:amd64					install
 libcurl3-gnutls:amd64				install
 libcwidget3:amd64				install
 libdaemon0:amd64				install
@@ -1110,6 +1112,7 @@ python-chardet					install
 python-colorama					install
 python-crypto					install
 python-cryptography				install
+python-csvkit					install
 python-dateutil					install
 python-debian					install
 python-debianbts				install
@@ -1169,6 +1172,7 @@ python-twisted-words				install
 python-urllib3					install
 python-wheel					install
 python-wstools					install
+python-xlrd					install
 python-zope.interface				install
 python2.7					install
 python2.7-minimal				install
@@ -1211,6 +1215,7 @@ shellcheck					install
 sshfs						install
 ssl-cert					install
 startpar					install
+stgit						install
 subversion					install
 suckless-tools					install
 systemd						install
