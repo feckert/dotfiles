@@ -5,6 +5,7 @@ acpid
 adduser
 apt
 apt-listchanges
+apt-transport-https
 apt-utils
 apticron
 aptitude
@@ -79,6 +80,7 @@ git-email
 gitk
 gnome-mime-data
 gnupg
+gnuplot
 gparted
 gpgv
 graphicsmagick-imagemagick-compat
@@ -256,6 +258,7 @@ network-manager-gnome
 nfacct
 nfs-common
 nitrogen
+nodejs
 ntp
 ntpdate
 openssh-client

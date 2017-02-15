@@ -4,8 +4,10 @@ acpi-support-base				install
 acpid						install
 adduser						install
 adwaita-icon-theme				install
+aglfn						install
 apt						install
 apt-listchanges					install
+apt-transport-https				install
 apt-utils					install
 apticron					install
 aptitude					install
@@ -185,6 +187,10 @@ gnome-mime-data					install
 gnupg						install
 gnupg-agent					install
 gnupg2						install
+gnuplot						install
+gnuplot-data					install
+gnuplot-qt					install
+gnuplot-tex					install
 gparted						install
 gpgv						install
 graphicsmagick					install
@@ -752,8 +758,9 @@ libpython3.4-stdlib:amd64			install
 libqmi-glib1:amd64				install
 libqmi-proxy					install
 libqpdf13:amd64					install
-libqt4-network:amd64				deinstall
+libqt4-network:amd64				install
 libqt4-opengl:amd64				deinstall
+libqt4-svg:amd64				install
 libqt4-xml:amd64				install
 libqt5core5a:amd64				install
 libqt5dbus5:amd64				install
@@ -763,7 +770,7 @@ libqt5printsupport5:amd64			install
 libqt5widgets5:amd64				install
 libqt5x11extras5:amd64				install
 libqtcore4:amd64				install
-libqtdbus4:amd64				deinstall
+libqtdbus4:amd64				install
 libqtgui4:amd64					install
 libquadmath0:amd64				install
 libraptor2-0:amd64				install
@@ -1062,6 +1069,7 @@ network-manager-gnome				install
 nfacct						install
 nfs-common					install
 nitrogen					install
+nodejs						install
 ntfs-3g						install
 ntp						install
 ntpdate						install
