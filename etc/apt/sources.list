@@ -1,7 +1,3 @@
-#------------------------------------------------------------------------------#
-#                   OFFICIAL DEBIAN REPOS
-#------------------------------------------------------------------------------#
-
 ###### Debian Main Repos
 deb http://ftp.de.debian.org/debian/ jessie main contrib
 deb-src http://ftp.de.debian.org/debian/ jessie main contrib
@@ -9,13 +5,17 @@ deb-src http://ftp.de.debian.org/debian/ jessie main contrib
 ###### Debian Update Repos
 deb http://security.debian.org/ jessie/updates main contrib
 deb-src http://security.debian.org/ jessie/updates main contrib
-#------------------------------------------------------------------------------#
-#                      UNOFFICIAL  REPOS                       #
-#------------------------------------------------------------------------------#
+
+###### Debian Backports
+deb http://ftp.debian.org/debian jessie-backports main contrib
 
 ###### 3rd Party Binary Repos
-
 #### Debian Mozilla team - http://mozilla.debian.net/
 ## Run this command: apt-get install pkg-mozilla-archive-keyring
 deb http://mozilla.debian.net/ jessie-backports firefox-release
-deb http://ftp.debian.org/debian jessie-backports main contrib
+
+#### Nodejs
+## Run this command: curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+deb http://deb.nodesource.com/node_6.x jessie main
+deb-src http://deb.nodesource.com/node_6.x jessie main
+
