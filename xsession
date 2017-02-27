@@ -30,7 +30,7 @@ xset b off
 #urxvtd -q -f -o; sleep 2
 #thunar --daemon &
 
-# set display view (WORKi)
+# set display view (WORK)
 if [ $(hostname) = "dev-feckert" ] ; then
 	xrandr --output HDMI1 --mode 1920x1200
 	xrandr --output HDMI3 --mode 1920x1200 --right-of HDMI1
