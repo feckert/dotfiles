@@ -14,16 +14,35 @@ Plugin 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
 
+set encoding=utf-8
+
 " Plugin settings airline
+set t_Co=256
+let g:airline_theme='luna'
+let g:airline_enable_branch=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
 
 " Plugin settings ctrlp
 let g:ctrlp_working_path_mode='ra'
-
-" Plugin airline theme
-"let g:airline_theme='jellybeans'
-let g:airline_theme='term'
 
 " File Browser settings
 let g:netrw_liststyle=3
