@@ -22,6 +22,7 @@
     ~/.packages-debian-manual: packages-debian-manual
     ~/.irssi: irssi/
     ~/.xsession: xsession
+    ~/.fonts: fonts
 - shell:
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/backup
