@@ -81,3 +81,6 @@ nmap <leader>k :E<cr>
 " Nerdtree shortcuts
 map <C-n> :NERDTreeToggle <CR>
 
+" ack search word under the cursor
+noremap <leader>a :Ack <cword><CR>
+
