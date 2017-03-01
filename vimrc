@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " Plugin list
 call vundle#begin()
 "Plugin 'VundleVim/Vundle.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
