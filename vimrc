@@ -18,7 +18,7 @@ set encoding=utf-8
 
 " Plugin settings airline
 set t_Co=256
-let g:airline_theme='luna'
+let g:airline_theme='molokai'
 let g:airline_enable_branch=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
