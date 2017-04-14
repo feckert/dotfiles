@@ -13,6 +13,7 @@
     ~/.vim: vim/
     ~/.quiltrc: quiltrc
     ~/.i3status.conf: i3status.conf
+    ~/.i3blocks.conf: i3blocks.conf
     ~/.bash_aliases: bash_aliases
     ~/.zshrc: zshrc
     ~/.zlogin: zlogin
