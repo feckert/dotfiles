@@ -1,0 +1,4 @@
+#!/bin/bash
+
+wget http://whatismyip.org/ -q -O - |
+grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>'
