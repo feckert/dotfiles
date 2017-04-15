@@ -25,7 +25,7 @@
     ~/.irssi: irssi/
     ~/.xsession: xsession
     ~/.fonts: fonts
-    ~/.conkyrc: conkyrc
+    ~/.conky: conky/
 - shell:
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/backup
