@@ -184,6 +184,9 @@ bindsym $mod+Shift+T border 1pixel
 # Autolock screen
 exec xautolock -time 5 -locker "~/bin/fuzzy_lock.sh" &
 
+# Start conky
+exec conky -c ~/.conky/conkyrc
+
 # Display shutdown selection
 set $Locker i3lock && sleep 1
 set $mode_system System (l) lock, (e) exit, (s) suspend, (r) reboot, (Shift+s) shutdown
