@@ -170,6 +170,9 @@ exec --no-startup-id nm-applet
 # Start bluetooth manager
 exec --no-startup-id blueman-applet
 
+# Start background images manager
+exec --no-startup-id nitrogen --restore ~/Wallpaper
+
 # Bind audio keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
@@ -177,9 +180,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle
 
 bindsym $mod+Shift+T border 1pixel
-
-# Restor Background images
-exec --no-startup-id nitrogen --restore ~/Wallpaper
 
 # Autolock screen
 exec xautolock -time 5 -locker "~/bin/fuzzy_lock.sh" &
