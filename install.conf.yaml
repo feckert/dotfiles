@@ -26,6 +26,7 @@
     ~/.xsession: xsession
     ~/.fonts: fonts
     ~/.conky: conky/
+    ~/.compton.conf: compton.conf
 - shell:
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/backup
