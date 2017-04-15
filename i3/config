@@ -167,6 +167,9 @@ bar {
 # Start network manager
 exec --no-startup-id nm-applet
 
+# Start bluetooth manager
+exec --no-startup-id blueman-applet
+
 # Bind audio keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
