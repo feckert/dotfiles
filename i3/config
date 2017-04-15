@@ -174,7 +174,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id nitrogen --restore ~/Wallpaper
 
 # Start Composite manager
-exec --no-startup-id --config ~/compton.conf
+exec --no-startup-id compton --config ~/.compton.conf
 
 # Bind audio keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
