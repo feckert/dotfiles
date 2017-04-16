@@ -15,12 +15,13 @@ use_xft yes
 xftfont Ubuntu-L:size=8
 
 own_window yes
-own_window_type normal
+own_window_type override
 own_window_transparent no
 own_window_colour 000000
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 own_window_argb_visual yes
 own_window_argb_value 128
+own_window_class Conky
 
 double_buffer yes
 draw_shades no
