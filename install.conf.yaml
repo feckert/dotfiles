@@ -8,6 +8,7 @@
     ~/.i3: i3/
     ~/.config/.wm: config/wm
     ~/.config/nitrogen: config/nitrogen
+    ~/.config/dunst: config/dunst
     ~/.config/Thunar/uca.xml: config/Thunar/uca.xml
     ~/bin: bin/
     ~/.vimrc: vimrc
