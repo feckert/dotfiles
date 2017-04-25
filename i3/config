@@ -203,12 +203,12 @@ exec xautolock -time 5 -locker "~/bin/fuzzy_lock.sh" &
 exec conky -c ~/.conky/conkyrc
 
 # Display shutdown selection
-set $Locker i3lock && sleep 1
+set $Locker ~/bin/fuzzy_lock.sh
 set $mode_system System (l) lock, (e) exit, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-        bindsym l exec --no-startup-id $Locker, mode "default"
+        bindsym l exec --no-startup-id $Locker && sleep 1, mode "default"
         bindsym e exec --no-startup-id i3-msg exit, mode "default"
-        bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+        bindsym s exec --no-startup-id $Locker && sleep 1 && systemctl suspend, mode "default"
         bindsym r exec --no-startup-id systemctl reboot, mode "default"
         bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
         # back to normal: Enter or Escape
