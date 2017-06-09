@@ -38,6 +38,9 @@ bindsym $mod+Shift+q kill
 # start program launcher
 bindsym $mod+r exec rofi -show run
 
+# start ssh launcher
+bindsym $mod+c exec rofi -show ssh
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
