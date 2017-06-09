@@ -72,7 +72,7 @@ bindsym $mod+s split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen
+bindsym $mod+Shift+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+d layout default
@@ -126,26 +126,16 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
 # rename workspace
 bindsym $mod+Shift+y exec i3-input -F 'Rename workspace to "%s"' -P 'New name: '
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym odiaeresis resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
@@ -200,30 +190,25 @@ bindsym $mod+Shift+T border 1pixel
 # Autolock screen
 exec xautolock -time 5 -locker "~/bin/fuzzy_lock.sh" &
 
+        # same bindings, but for the arrow keys
 # Start conky
 exec conky -c ~/.conky/conkyrc
 
-# Display shutdown selection
-set $Locker ~/bin/fuzzy_lock.sh
-set $mode_system System (l) lock, (e) exit, (s) suspend, (r) reboot, (Shift+s) shutdown
-mode "$mode_system" {
-        bindsym l exec --no-startup-id $Locker && sleep 1, mode "default"
-        bindsym e exec --no-startup-id i3-msg exit, mode "default"
-        bindsym s exec --no-startup-id $Locker && sleep 1 && systemctl suspend, mode "default"
-        bindsym r exec --no-startup-id systemctl reboot, mode "default"
-        bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+# Lock screen
+bindsym $mod+Shift+s exec ~/bin/i3-fuzzy-lock.sh
 
-bindsym $mod+Shift+Pause mode "$mode_system"
+# Show power selection
+bindsym $mod+Shift+e exec ~/bin/rofi-power.sh "i3-msg exit"
 
-#gimp
+# Start file manager
+bindsym $mod+f exec thunar
+
+# Gimp layout
 for_window [title="GIMP Startup"] move workspace 9
 for_window [window_role="gimp-dock"] floating disable; layout stacking; move left
 for_window [window_role="gimp-toolbox"] floating disable; layout stacking; move left
 
+# Xcalc layout
 for_window [class="XCalc"] floating enable
 
 # Assign workspace
