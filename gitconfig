@@ -11,5 +11,8 @@
 [push]
 	default = simple
 [alias]
-	alias-oneline = log --pretty=oneline
-	alias-onegraph = log --oneline --graph --decorate --all
+	st = status
+	co = commit
+	ch = checkout
+	di = diff
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" 
