@@ -188,7 +188,7 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym $mod+Shift+T border 1pixel
 
 # Autolock screen
-exec xautolock -time 5 -locker "~/bin/fuzzy_lock.sh" &
+exec xautolock -time 5 -locker "~/bin/i3-fuzzy-lock.sh" &
 
         # same bindings, but for the arrow keys
 # Start conky
