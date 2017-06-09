@@ -29,6 +29,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec urxvt
 
+# layout for new workspaces
+workspace_layout tabbed
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -218,6 +221,8 @@ bindsym $mod+Shift+Pause mode "$mode_system"
 for_window [title="GIMP Startup"] move workspace 9
 for_window [window_role="gimp-dock"] floating disable; layout stacking; move left
 for_window [window_role="gimp-toolbox"] floating disable; layout stacking; move left
+
+for_window [class="XCalc"] floating enable
 
 # Assign workspace
 assign [class="Chromium|Firefox"] 1
