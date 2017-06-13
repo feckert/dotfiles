@@ -29,6 +29,7 @@
     ~/.fonts: fonts
     ~/.conky: conky/
     ~/.compton.conf: compton.conf
+    ~/.oh-my-zsh: oh-my-zsh/
 - shell:
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/backup
