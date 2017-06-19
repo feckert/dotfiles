@@ -30,6 +30,7 @@
     ~/.conky: conky/
     ~/.compton.conf: compton.conf
     ~/.oh-my-zsh: oh-my-zsh/
+    ~/.bashrc: bashrc
 - shell:
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/backup
