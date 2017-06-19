@@ -11,8 +11,6 @@
 [push]
 	default = simple
 [alias]
-	st = status
-	co = commit
-	ch = checkout
-	di = diff
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" 
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\"
+[core]
+	editor = vi
