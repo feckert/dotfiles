@@ -60,7 +60,8 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=de_DE.UTF-8
+export LC_ALL=de_DE.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -84,3 +85,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias -g G='| grep'
+alias git-config-private='git config user.email Eckert.Florian@googlemail.com'
+alias git-config-work='git config user.email fe@dev.tdt.de'
