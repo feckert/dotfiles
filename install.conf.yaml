@@ -31,6 +31,7 @@
     ~/.conky: conky/
     ~/.compton.conf: compton.conf
     ~/.oh-my-zsh: oh-my-zsh/
+    ~/.oh-my-zsh-custom: oh-my-zsh-custom/
     ~/.bashrc: bashrc
 - shell:
     - git submodule update --init --recursive
