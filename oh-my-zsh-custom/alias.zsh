@@ -1,6 +1,2 @@
 alias git-config-private='git config user.email Eckert.Florian@googlemail.com'
 alias git-config-work='git config user.email fe@dev.tdt.de'
-alias minicom_drno-lede='minicom -b 115200 -D /dev/ttyUSB_DRNO_LEDE'
-alias minicom_drno-owrt='minicom -b 115300 -D /dev/ttyUSB_DRNO_OWRT'
-alias minicom_c1500-owrt='minicom -b 38400 -D /dev/ttyUSB_C1500_OWRT'
-alias minicom_apu-lede='minicom -b 38400 -D /dev/ttyUSB_APU_LEDE'
