@@ -20,9 +20,6 @@
     ~/.i3blocks.conf: i3blocks.conf
     ~/.bash_aliases: bash_aliases
     ~/.zshrc: zshrc
-    ~/.zlogin: zlogin
-    ~/.zshrc.local: zshrc.local
-    ~/.zshrc.pre: zshrc.pre
     ~/.packages-debian-all: packages-debian-all
     ~/.packages-debian-manual: packages-debian-manual
     ~/.irssi: irssi/
