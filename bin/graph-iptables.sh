@@ -1,13 +1,16 @@
 #!/bin/sh
 
-SSHFS_DIR="ssh_192.168.0.50"
 SRC="iptables"
-IP_D="/home/feckert/mnt/${SSHFS_DIR}/tmp"
+DIR="/tmp"
 
-if [ -e ${IP_D}/iptables.txt ]; then
+if [ -e ${DIR}/${SRC}.txt ]; then
 	for t in "mangle" "filter" "nat" "raw"; do
-		cat ${IP_D}/${SRC}.txt | ~/bin/graph-iptables-save.pl -tables ${t} > ${IP_D}/${SRC}-${t}.dot && dot -Tpng ${IP_D}/${SRC}-${t}.dot > ${IP_D}/${SRC}-${t}.png
+		~/bin/graph-iptables-save.pl -tables ${t} \
+			> ${DIR}/${SRC}-${t}.dot \
+			< ${DIR}/${SRC}.txt && \
+			dot -Tpng ${DIR}/${SRC}-${t}.dot > ${DIR}/${SRC}-${t}.png
 	done
 else
-	echo "file ${IP_D}/${SRC}.txt does not exist"
+	echo "No input file ${DIR}/${SRC}.txt found"
+	echo "Execude: iptables-save > ${DIR}/${SRC}.txt"
 fi
