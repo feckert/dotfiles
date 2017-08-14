@@ -12,5 +12,6 @@
 	default = simple
 [alias]
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\"
+	tree = log --oneline --decorate --all --graph
 [core]
 	editor = vi
