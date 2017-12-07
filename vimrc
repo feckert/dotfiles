@@ -17,8 +17,7 @@ filetype plugin indent on
 set encoding=utf-8
 
 " Plugin settings airline
-set t_Co=256
-let g:airline_theme='molokai'
+let g:airline_theme='powerlineish'
 let g:airline_enable_branch=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
@@ -65,6 +64,8 @@ set ruler " Show cursor position
 set cursorline " Highlight line with cursor
 set number " Show line number
 set laststatus=2 "Always show the status line
+set background=dark
+set t_Co=256
 
 " Set backup file location
 set backupdir=~/.vim/backup//
