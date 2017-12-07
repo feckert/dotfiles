@@ -11,6 +11,7 @@
     ~/.config/dunst: config/dunst
     ~/.config/rofi: config/rofi
     ~/.config/Thunar/uca.xml: config/Thunar/uca.xml
+    ~/.config/xfce4: config/xfce4
     ~/bin: bin/
     ~/.vimrc: vimrc
     ~/.vim: vim/
@@ -37,4 +38,5 @@
     - mkdir -p ~/.vim/undo
     - mkdir -p ~/.config
     - mkdir -p ~/.config/Thunar
+    - mkdir -p ~/.config/xfce4
 
