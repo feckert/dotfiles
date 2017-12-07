@@ -4,10 +4,10 @@ CMD="${1}"
 
 case "${CMD}" in
 	off)
-		xrandr --output HDMI2 --off
+		xrandr --output HDMI1 --off
 		;;
-	beamer)
-		xrandr --output HDMI2 --mode 1600x1200 --right-of LVDS1
+	tv)
+		xrandr --output HDMI1 --mode 1920x1080 --right-of LVDS1
 		;;
 	*)
 		echo "cmd not supported"
