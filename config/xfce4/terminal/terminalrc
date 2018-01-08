@@ -28,9 +28,11 @@ ColorBold=#93a1a1
 ColorBoldUseDefault=FALSE
 TabActivityColor=#dc322f
 ScrollingUnlimited=TRUE
-
 ColorCursor=#b7b8b9
 ColorForeground=#b7b8b9
 ColorBackground=#0c0d0e
 ColorPalette=#0c0d0e;#e31a1c;#31a354;#dca060;#3182bd;#756bb1;#80b1d3;#b7b8b9;#737475;#e31a1c;#31a354;#dca060;#3182bd;#756bb1;#80b1d3;#fcfdfe
+ShortcutsNoMenukey=TRUE
+ShortcutsNoHelpkey=TRUE
+ShortcutsNoMnemonics=TRUE
 
