@@ -7,22 +7,24 @@
 #
 
 start_maintenance_mode() {
-	local cdir="$(pwd)"
+	local cdir
+	cdir="$(pwd)"
 
 	echo "Start maintenance mode for Nextcloud..."
-	cd "${NEXTCLOUD_APP_DIR}"
+	cd "${NEXTCLOUD_APP_DIR}" || exit 1
 	sudo -u "${WEBSERVER_USER}" php occ maintenance:mode --on
-	cd "$cdir"
+	cd "$cdir" || exit 1
 	echo "Done"
 }
 
 stop_maintenance_mode() {
-	local cdir="$(pwd)"
+	local cdir
+	cdir="$(pwd)"
 
 	echo "Stop maintenance mode for Nextcloud..."
-	cd "${NEXTCLOUD_APP_DIR}"
+	cd "${NEXTCLOUD_APP_DIR}" || exit 1
 	sudo -u "${WEBSERVER_USER}" php occ maintenance:mode --off
-	cd "$cdir"
+	cd "$cdir" || exit 1
 	echo "Done"
 }
 
@@ -55,12 +57,12 @@ importing_app_dir() {
 	echo "Done"
 }
 
-exporingt_nexcloud_db() {
+exporting_nexcloud_db() {
 	echo "Backup Nextcloud database..."
 	mysqldump --single-transaction \
 		-h localhost \
-		-u "${NEXTCLOUD_DB_USER}" \
-		-p"${NEXTCLOUD_DB_PASSWORD}" \
+		--user="${NEXTCLOUD_DB_USER}" \
+		--password="${NEXTCLOUD_DB_PASSWORD}" \
 		"${NEXTCLOUD_DB}" > "${BACKUP_DIR}/${NEXTCLOUD_DB_FILE}"
 	echo "Done"
 }
@@ -68,51 +70,49 @@ exporingt_nexcloud_db() {
 importing_nextcloud_db() {
 	echo "Dropping Nextcloud DB..."
 	mysql -h localhost \
-		-u "${NEXTCLOUD_DB_USER}" \
-		-p"${NEXTCLOUD_DB_PASSWORD}" \
+		--user="${NEXTCLOUD_DB_USER}" \
+		--password="${NEXTCLOUD_DB_PASSWORD}" \
 		-e "DROP DATABASE ${NEXTCLOUD_DB}"
 	echo "Done"
 
 	echo "Creating Nextcloud DB..."
 	mysql -h localhost \
-		-u "${NEXTCLOUD_DB_USER}" \
-		-p"${NEXTCLOUD_DB_PASSWORD}" \
+		--user="${NEXTCLOUD_DB_USER}" \
+		--password="${NEXTCLOUD_DB_PASSWORD}" \
 		-e "CREATE DATABASE ${NEXTCLOUD_DB}"
 	echo "Done"
 
 	echo "Restoring Nextcloud DB..."
 	mysql -h localhost \
-		-u "${NEXTCLOUD_DB_USER}" \
-		-p"${NEXTCLOUD_DB_PASSWORD}" \
+		--user="${NEXTCLOUD_DB_USER}" \
+		--password="${NEXTCLOUD_DB_PASSWORD}" \
 		"${NEXTCLOUD_DB}" < "${BACKUP_DIR}/${NEXTCLOUD_DB_FILE}"
 	echo "Done"
 }
 
 do_houskeeping() {
-	local cdir="$(pwd)"
+	local cdir
+	cdir="$(pwd)"
 
 	echo "Setting directory permissions..."
 	chown -R "${WEBSERVER_USER}":"${WEBSERVER_USER}" "${NEXTCLOUD_APP_DIR}"
 	echo "Done"
 
 	echo "Updating the system data-fingerprint..."
-	cd "${NEXTCLOUD_APP_DIR}"
+	cd "${NEXTCLOUD_APP_DIR}" || exit 1
 	sudo -u "${WEBSERVER_USER}" php occ maintenance:data-fingerprint
-	cd "$cdir"
+	cd "$cdir" || exit 1
 	echo "Done"
 }
 
 importing() {
-	local nextcloud_db_file="$1"
-	local nextcloud_app_file="$2"
-
-	if [ ! -f "${nextcloud_db_file}" ]; then
-		echo "ERROR: No Nextcloud db file given!"
+	if [ ! -f "${BACKUP_DIR}/${NEXTCLOUD_DB_FILE}" ]; then
+		echo "ERROR: No Nextcloud db file \"${NEXTCLOUD_DB_FILE}\" found in \"${BACKUP_DIR}\"!"
 		exit 1
 	fi
 
-	if [ ! -f "${nextcloud_app_file}" ]; then
-		echo "ERROR: No Nextcloud app file given!"
+	if [ ! -f "${BACKUP_DIR}/${NEXTCLOUD_APP_FILE}" ]; then
+		echo "ERROR: No Nextcloud app file \"${NEXTCLOUD_APP_FILE}\" found in \"${BACKUP_DIR}\"!"
 		exit 1
 	fi
 
@@ -126,7 +126,12 @@ importing() {
 }
 
 exporting() {
-	if [ ! -d "${BACKUP_DIR}" ]; then
+	if [ -d "${BACKUP_DIR}" ]; then
+		echo "ERROR: Backup directory \"${BACKUP_DIR}\" already exist!"
+		echo "Please delete first"
+		exit 2
+	else
+		echo "INFO: Creating backup directory \"${BACKUP_DIR}\""
 		mkdir -p "${BACKUP_DIR}"
 	fi
 
@@ -166,41 +171,37 @@ usage() {
 
 	echo "Usage: $(basename "${0}") [importing|exporting]"
 	echo ""
-	echo "	importing: import database and Nextcloud app"
-	echo "		arg1: nextcloud mysql [backup].sql file"
-	echo "		arg2: nextcloud app [backup].tar.gz file"
-	echo "	exporting: export database and Nextcloud app"
+	echo "	importing: import database and nextcloud app"
+	echo "	exporting: export database and nextcloud app"
 
 	exit "$rval"
 }
 
 main() {
 	local cmd="$1"
-	local nextcloud_db_file="$2"
-	local nextcloud_app_file="$3"
 
 	if [ "$(id -u)" != "0" ]; then
 		echo "ERROR: This script has to be run as root!"
 		exit 1
 	fi
 
-	BACKUP_DIR="/mnt/nextcloud"
+	BACKUP_DIR="/mnt/nextcloud/nextcloud_backup"
 
 	WEBSERVER="nginx"
 	WEBSERVER_USER="www-data"
-	NEXTCLOUD_DB=""
-	NEXTCLOUD_DB_USER=""
-	NEXTCLOUD_DB_PASSWORD=""
-	NEXTCLOUD_DB_FILE="nextcloud.sql"
+	NEXTCLOUD_DB="nextcloud"
+	NEXTCLOUD_DB_USER="nextcloud"
+	NEXTCLOUD_DB_PASSWORD="nextcloud"
+	NEXTCLOUD_DB_FILE="nextcloud-mysql.sql"
 
 	NEXTCLOUD_APP_DIR="/var/www/nextcloud"
-	NEXTCLOUD_APP_FILE="nextcloud-filedir.tar.gz"
+	NEXTCLOUD_APP_FILE="nextcloud-app.tar.gz"
 
 	check_config
 
-	case "$1" in
+	case "$cmd" in
 		importing)
-			importing "$nextcloud_db_file" "$nextcloud_app_file"
+			importing
 			echo "DONE!"
 			echo "Backup successfully restored"
 			;;
