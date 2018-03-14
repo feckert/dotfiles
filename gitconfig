@@ -13,10 +13,11 @@
 [alias]
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\"
 	tree = log --oneline --decorate --all --graph
-	# git pr <number> <remote>
-	pr = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-	pr-clean = "!git checkout master ; git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
-	# git mr <number> <remote>
-	mr = "!f() { git fetch -fu ${2:-upstream} merge-requests/$1/head:mr/$2-$1 && git checkout mr/$2-$1; }; f"
+	# git pr/pr-clean <number> <remote>
+	pr = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/${2:-upstream}-$1 && git checkout pr/${2:-upstream}-$1; }; f"
+	pr-clean = "!f() { git checkout master; git for-each-ref refs/heads/pr --format=\"%(refname)\" | grep ${2:-upstream}-$1 && git branch -D pr/${2:-upstream}-$1; }; f"
+	# git mr/mr-clean <number> <remote>
+	mr = "!f() { git fetch -fu ${2:-upstream} merge-requests/$1/head:mr/${2:-upstream}-$1 && git checkout mr/${2:-upstream}-$1; }; f"
+	mr-clean = "!f() { git checkout master; git for-each-ref refs/heads/mr --format=\"%(refname)\" | grep ${2:-upstream}-$1 && git branch -D mr/${2:-upstream}-$1; }; f"
 [core]
 	editor = vi
