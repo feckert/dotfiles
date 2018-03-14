@@ -1,20 +1,22 @@
 [user]
 	name = Florian Eckert
-	email = Eckert.Florian@googlemail.com
+	email = fe@dev.tdt.de
 [sendemail]
 	suppresscc = self
-	smtpuser = Eckert.Florian@googlemail.com
-	smtpserver = smtp.googlemail.com
+	smtpuser = fe@dev.tdt.de
+	smtpserver = mail.dev.tdt.de
 	smtpencryption = tls
-	smtpserverport = 587
+	smtpserverport = 25
 	annotate = true
 [push]
 	default = simple
 [alias]
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\"
 	tree = log --oneline --decorate --all --graph
+	# git pr <number> <remote>
 	pr = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
 	pr-clean = "!git checkout master ; git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+	# git mr <number> <remote>
 	mr = "!f() { git fetch -fu ${2:-upstream} merge-requests/$1/head:mr/$2-$1 && git checkout mr/$2-$1; }; f"
 [core]
 	editor = vi
