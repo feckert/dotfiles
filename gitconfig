@@ -15,5 +15,6 @@
 	tree = log --oneline --decorate --all --graph
 	pr = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
 	pr-clean = "!git checkout master ; git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+	mr = "!f() { git fetch -fu ${2:-upstream} merge-requests/$1/head:mr/$2-$1 && git checkout mr/$2-$1; }; f"
 [core]
 	editor = vi
