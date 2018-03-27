@@ -170,6 +170,9 @@ exec --no-startup-id compton --config ~/.compton.conf
 # Start pulseaudio sound tray
 exec --no-startup-id pasystray
 
+# Bind screenshot tool
+bindsym --release $mod+z exec scrot -s -e'mv $f ~/Bilder/Screenshots/'
+
 # Bind audio keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%
@@ -190,7 +193,7 @@ bindsym $mod+Shift+T border 1pixel
 # Autolock screen
 exec xautolock -time 5 -locker "~/bin/i3-fuzzy-lock.sh" &
 
-        # same bindings, but for the arrow keys
+# same bindings, but for the arrow keys
 # Start conky
 exec conky -c ~/.conky/conkyrc
 
