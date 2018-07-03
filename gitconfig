@@ -6,6 +6,7 @@
 	smtpuser = fe@dev.tdt.de
 	smtpserver = mail.dev.tdt.de
 	smtpencryption = tls
+	smtpsslcertpath = /usr/local/share/ca-certificates/maildevtdtde.crt
 	smtpserverport = 25
 	annotate = true
 [push]
