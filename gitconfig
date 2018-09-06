@@ -8,7 +8,8 @@
 	smtpencryption = tls
 	smtpsslcertpath = /usr/local/share/ca-certificates/maildevtdtde.crt
 	smtpserverport = 25
-	annotate = true
+[pull]
+	ff = only
 [push]
 	default = simple
 [alias]
