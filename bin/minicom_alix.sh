@@ -1,2 +1,2 @@
 #!/bin/sh
-minicom -b 115200 -D /dev/ttyUSB_ALIX
+minicom -b 38400 -D /dev/ttyUSB_ALIX
