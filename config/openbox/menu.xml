@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Openbox 3">
+  <item label="Terminal">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+        </startupnotify>
+        <command>xfce4-terminal</command>
+      </action>
+  </item>
+  <item label="Run...">
+      <action name="Execute">
+        <execute>rofi -show run</execute>
+      </action>
+  </item>
+  <separator />
+  <item label="ObConf">
+    <action name="Execute"><execute>obconf</execute></action>
+  </item>
+  <item label="LxAppearance">
+    <action name="Execute"><execute>lxappearance</execute></action>
+  </item>
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Restart">
+    <action name="Restart" />
+  </item>
+  <separator />
+  <item label="Exit">
+    <action name="Execute"><execute>rofi-power 'openbox --exit'</execute></action>
+  </item>
+</menu>
+
+</openbox_menu>
