@@ -1,0 +1,5 @@
+# Start panel
+tint2 &
+
+# Start background
+nitrogen --restore &

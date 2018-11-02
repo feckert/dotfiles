@@ -10,7 +10,7 @@
     <focusNew>yes</focusNew>
     <!-- always try to focus new windows when they appear. other rules do
        apply -->
-    <followMouse>no</followMouse>
+    <followMouse>yes</followMouse>
     <!-- move focus to a window when you move the mouse into it -->
     <focusLast>yes</focusLast>
     <!-- focus the last used window when changing desktops, instead of the one
@@ -27,14 +27,14 @@
   <placement>
     <policy>Smart</policy>
     <!-- 'Smart' or 'UnderMouse' -->
-    <center>yes</center>
+    <center>no</center>
     <!-- whether to place windows in the center of the free area found or
        the top left corner -->
-    <monitor>Primary</monitor>
+    <monitor>Active</monitor>
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is, 'Primary' - only on the primary monitor -->
-    <primaryMonitor>1</primaryMonitor>
+    <primaryMonitor>Active</primaryMonitor>
     <!-- The monitor where Openbox should place popup dialogs such as the
        focus cycling popup, or the desktop switch popup.  It can be an index
        from 1, specifying a particular monitor.  Or it can be one of the
@@ -57,57 +57,57 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>sans</name>
-      <size>8</size>
+      <name>DejaVu Sans</name>
+      <size>7</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>sans</name>
-      <size>8</size>
+      <name>DejaVu Sans</name>
+      <size>7</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>sans</name>
-      <size>9</size>
+      <name>DejaVu Sans</name>
+      <size>8</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>sans</name>
-      <size>9</size>
+      <name>DejaVu Sans</name>
+      <size>8</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>sans</name>
+      <name>DejaVu Sans</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>sans</name>
+      <name>DejaVu Sans</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
   </theme>
@@ -123,12 +123,12 @@
     <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
-      <!-- set names up here if you want to, like this:
-    <name>desktop 1</name>
-    <name>desktop 2</name>
-    -->
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
     </names>
-    <popupTime>875</popupTime>
+    <popupTime>750</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
   </desktops>
@@ -153,13 +153,13 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>0</top>
+    <top>30</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
   <dock>
-    <position>TopLeft</position>
+    <position>Top</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
@@ -177,100 +177,75 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
-    <chainQuitKey>C-g</chainQuitKey>
-    <!-- Keybindings for desktop switching -->
-    <keybind key="C-A-Left">
-      <action name="GoToDesktop">
-        <to>left</to>
-        <wrap>no</wrap>
+    <!-- General keybindings -->
+    <keybind key="W-p">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
       </action>
     </keybind>
-    <keybind key="C-A-Right">
-      <action name="GoToDesktop">
-        <to>right</to>
-        <wrap>no</wrap>
+    <keybind key="W-S-c">
+      <action name="Reconfigure"/>
+    </keybind>
+    <keybind key="W-S-r">
+      <action name="Restart"/>
+    </keybind>
+    <keybind key="W-S-e">
+      <action name="Execute">
+        <command>rofi-power.sh 'openbox --exit'</command>
       </action>
     </keybind>
-    <keybind key="C-A-Up">
-      <action name="GoToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-A-Down">
-      <action name="GoToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Left">
-      <action name="SendToDesktop">
-        <to>left</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Right">
-      <action name="SendToDesktop">
-        <to>right</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Up">
-      <action name="SendToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Down">
-      <action name="SendToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="W-F1">
+    <!-- Keybindings for desktops -->
+    <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="W-F2">
+    <keybind key="W-2">
       <action name="GoToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="W-F3">
+    <keybind key="W-3">
       <action name="GoToDesktop">
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="W-F4">
+    <keybind key="W-4">
       <action name="GoToDesktop">
         <to>4</to>
       </action>
     </keybind>
-    <keybind key="W-d">
-      <action name="ToggleShowDesktop"/>
+    <keybind key="W-S-1">
+      <action name="SendToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-2">
+      <action name="SendToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-3">
+      <action name="SendToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-4">
+      <action name="SendToDesktop">
+        <to>4</to>
+      </action>
     </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="A-F4">
-      <action name="Close"/>
-    </keybind>
-    <keybind key="A-Escape">
-      <action name="Lower"/>
-      <action name="FocusToBottom"/>
-      <action name="Unfocus"/>
-    </keybind>
-    <keybind key="A-space">
+    <keybind key="W-w">
       <action name="ShowMenu">
         <menu>client-menu</menu>
       </action>
     </keybind>
-    <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
-    <keybind key="A-Print">
-      <action name="Execute">
-        <command>scrot -s</command>
+    <keybind key="W-a">
+      <action name="ShowMenu">
+        <menu>client-list-combined-menu</menu>
       </action>
     </keybind>
-    <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
         <finalactions>
@@ -280,61 +255,146 @@
         </finalactions>
       </action>
     </keybind>
-    <keybind key="A-S-Tab">
-      <action name="PreviousWindow">
-        <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </finalactions>
-      </action>
-    </keybind>
-    <keybind key="C-A-Tab">
-      <action name="NextWindow">
-        <panels>yes</panels>
-        <desktop>yes</desktop>
-        <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </finalactions>
-      </action>
-    </keybind>
-    <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
+    <keybind key="W-l">
       <action name="DirectionalCycleWindows">
         <direction>right</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Left">
+    <keybind key="W-h">
       <action name="DirectionalCycleWindows">
         <direction>left</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Up">
+    <keybind key="W-k">
       <action name="DirectionalCycleWindows">
         <direction>up</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Down">
+    <keybind key="W-j">
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
       </action>
     </keybind>
-    <!-- Keybindings for running applications -->
+    <keybind key="W-s">
+      <action name="ToggleShade"/>
+    </keybind>
+    <keybind key="W-i">
+      <action name="Iconify"/>
+    </keybind>
+    <keybind key="W-v">
+      <action name="ToggleMaximize">
+        <direction>vertical</direction>
+      </action>
+    </keybind>
+    <keybind key="W-S-f">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <!--<keybind key="W-S-f">
+      <action name="ToggleFullscreen"/>
+    </keybind>-->
+    <keybind key="W-m">
+      <action name="Move"/>
+    </keybind>
+    <keybind key="W-S-l">
+      <action name="MoveToEdge">
+        <direction>east</direction>
+      </action>
+    </keybind>
+    <keybind key="W-S-h">
+      <action name="MoveToEdge">
+        <direction>west</direction>
+      </action>
+    </keybind>
+    <keybind key="W-S-k">
+      <action name="MoveToEdge">
+        <direction>north</direction>
+      </action>
+    </keybind>
+    <keybind key="W-S-j">
+      <action name="MoveToEdge">
+        <direction>south</direction>
+      </action>
+    </keybind>
+    <keybind key="W-g">
+      <action name="Resize"/>
+    </keybind>
+    <keybind key="W-u">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-z">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-S-m">
+      <action name="GrowToFill"/>
+    </keybind>
+    <keybind key="W-c">
+      <action name="Close"/>
+    </keybind>
+    <!-- External keybindings -->
+    <keybind key="W-r">
+      <action name="Execute">
+        <command>rofi -show run</command>
+      </action>
+    </keybind>
+    <keybind key="W-o">
+      <action name="Execute">
+        <command>rofi -show ssh</command>
+      </action>
+    </keybind>
     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Konqueror</name>
         </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
+        <command>xfce4-terminal</command>
       </action>
     </keybind>
-    <!-- Launch scrot when Print is pressed -->
-    <keybind key="Print">
+    <keybind key="W-f">
       <action name="Execute">
-        <command>scrot</command>
+        <command>thunar</command>
+      </action>
+    </keybind>
+    <keybind key="W-b">
+      <action name="Execute">
+        <command>boosta</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <command>xbacklight -dec 10</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <command>xbacklight -inc 10</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>pactl set-source-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle</command>
+      </action>
+    </keybind>
+    <keybind key="W-S-s">
+      <action name="Execute">
+        <command>i3lock</command>
       </action>
     </keybind>
   </keyboard>
@@ -343,7 +403,7 @@
     <!-- number of pixels the mouse must move before a drag begins -->
     <doubleClickTime>500</doubleClickTime>
     <!-- in milliseconds (1000 = 1 second) -->
-    <screenEdgeWarpTime>400</screenEdgeWarpTime>
+    <screenEdgeWarpTime>0</screenEdgeWarpTime>
     <!-- Time before changing desktops when the pointer touches the edge of the
        screen while moving a window, in milliseconds (1000 = 1 second).
        Set this to 0 to disable warping -->
@@ -358,7 +418,7 @@
       <mousebind button="A-Left" action="Click">
         <action name="Unshade"/>
       </mousebind>
-      <mousebind button="A-Left" action="Drag">
+      <mousebind button="W-Left" action="Drag">
         <action name="Move"/>
       </mousebind>
       <mousebind button="A-Right" action="Press">
@@ -366,7 +426,7 @@
         <action name="Raise"/>
         <action name="Unshade"/>
       </mousebind>
-      <mousebind button="A-Right" action="Drag">
+      <mousebind button="W-Right" action="Drag">
         <action name="Resize"/>
       </mousebind>
       <mousebind button="A-Middle" action="Press">
@@ -410,7 +470,7 @@
         <action name="Move"/>
       </mousebind>
       <mousebind button="Left" action="DoubleClick">
-        <action name="ToggleMaximize"/>
+        <action name="ToggleMaximizeFull"/>
       </mousebind>
       <mousebind button="Up" action="Click">
         <action name="if">
@@ -794,5 +854,14 @@
 
   # end of the example
 -->
+    <!--<application class="*">
+    <decor>no</decor>
+  </application>-->
+    <application class="Obconf">
+      <size>
+        <width>696</width>
+        <height>572</height>
+      </size>
+    </application>
   </applications>
 </openbox_config>

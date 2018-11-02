@@ -1,41 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <openbox_menu xmlns="http://openbox.org/"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://openbox.org/
-                file:///usr/share/openbox/menu.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://openbox.org/
+	file:///usr/share/openbox/menu.xsd">
 
 <menu id="root-menu" label="Openbox 3">
-  <item label="Terminal">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-        </startupnotify>
-        <command>xfce4-terminal</command>
-      </action>
-  </item>
-  <item label="Run...">
-      <action name="Execute">
-        <execute>rofi -show run</execute>
-      </action>
-  </item>
-  <separator />
-  <item label="ObConf">
-    <action name="Execute"><execute>obconf</execute></action>
-  </item>
-  <item label="LxAppearance">
-    <action name="Execute"><execute>lxappearance</execute></action>
-  </item>
-  <item label="Reconfigure">
-    <action name="Reconfigure" />
-  </item>
-  <item label="Restart">
-    <action name="Restart" />
-  </item>
-  <separator />
-  <item label="Exit">
-    <action name="Execute"><execute>rofi-power 'openbox --exit'</execute></action>
-  </item>
-</menu>
+	<item label="Terminal">
+		<action name="Execute">
+			<startupnotif>
+				<enabled>true</enabled>
+			</startupnotify>
+			<command>xfce4-terminal</command>
+		</action>
+	</item>
+	<item label="Run...">
+		<action name="Execute">
+			<execute>rofi -show run</execute>
+		</action>
+	</item>
+	<separator />
+	<item label="ObConf">
+		<action name="Execute">
+			<execute>obconf</execute>
+		</action>
+	</item>
+	<item label="LxAppearance">
+		<action name="Execute">
+			<execute>lxappearance</execute>
+		</action>
+	</item>
+	<item label="Reconfigure">
+		<action name="Reconfigure" />
+	</item>
+	<item label="Restart">
+		<action name="Restart" />
+	</item>
+	<separator />
+	<item label="Exit">
+		<action name="Execute">
+			<execute>rofi-power.sh 'openbox --exit'</execute>
+		</action>
+	</item>
 
+<menu label="Desktop menu" id="openbox-desktop">
+	<menu id="xtile-menu" label="Tile windows">
+		<item label="Undo last operation">
+			<action name="Execute">
+				<execute>x-tile z</execute>
+			</action>
+		</item>
+		<item label="Cycle last operation ">
+			<action name="Execute">
+				<execute>x-tile y</execute>
+			</action>
+		</item>
+		<item label="Invert last operation">
+			<action name="Execute">
+				<execute>x-tile i</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Vertical tiling">
+			<action name="Execute">
+				<execute>x-tile v</execute>
+			</action>
+		</item>
+		<item label="Horizontal tiling">
+			<action name="Execute">
+				<execute>x-tile h</execute>
+			</action>
+		</item>
+		<item label="Triangle-up">
+			<action name="Execute">
+				<execute>x-tile u</execute>
+			</action>
+		</item>
+		<item label="Triangle-down">
+			<action name="Execute">
+				<execute>x-tile d</execute>
+			</action>
+		</item>
+		<item label="Triangle-left">
+			<action name="Execute">
+				<execute>x-tile l</execute>
+			</action>
+		</item>
+		<item label="Triangle-right">
+			<action name="Execute">
+				<execute>x-tile r</execute>
+			</action>
+		</item>
+		<item label="Quarter tiling">
+			<action name="Execute">
+				<execute>x-tile q</execute>
+			</action>
+		</item>
+		<item label="Custom tiling 1">
+			<action name="Execute">
+				<execute>x-tile 1</execute>
+			</action>
+		</item>
+		<item label="Custom tiling 2">
+			<action name="Execute">
+				<execute>x-tile 2</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Close all">
+			<action name="Execute">
+				<execute>x-tile c</execute>
+			</action>
+		</item>
+		<item label="Maximize all">
+			<action name="Execute">
+				<execute>x-tile m</execute>
+			</action>
+		</item>
+		<item label="Un-maximize all">
+			<action name="Execute">
+				<execute>x-tile M</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Open x-tile">
+			<action name="Execute">
+				<execute>x-tile w</execute>
+			</action>
+		</item>
+	</menu>
+	</menu>
+</menu>
 </openbox_menu>
