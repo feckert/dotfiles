@@ -12,6 +12,8 @@
     ~/.config/rofi: config/rofi
     ~/.config/Thunar/uca.xml: config/Thunar/uca.xml
     ~/.config/xfce4: config/xfce4
+    ~/.config/openbox: config/openbox
+    ~/.config/tint2: config/tint2
     ~/bin: bin/
     ~/.vimrc: vimrc
     ~/.vim: vim/
