@@ -191,7 +191,7 @@
     </keybind>
     <keybind key="W-S-e">
       <action name="Execute">
-        <command>rofi-power.sh 'openbox --exit'</command>
+        <command>~/bin/rofi-power.sh 'openbox --exit'</command>
       </action>
     </keybind>
     <!-- Keybindings for desktops -->
