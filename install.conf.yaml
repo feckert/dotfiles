@@ -35,6 +35,7 @@
     ~/.oh-my-zsh-custom: oh-my-zsh-custom/
     ~/.bashrc: bashrc
     ~/.pandoc: pandoc/
+    ~/.weechat: weechat/
 - shell:
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/backup
@@ -44,4 +45,5 @@
     - mkdir -p ~/.config/Thunar
     - mkdir -p ~/.config/xfce4
     - mkdir -p ~/.pandoc
+    - mkdir -p ~/.weechat
 
