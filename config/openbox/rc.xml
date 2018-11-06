@@ -362,11 +362,6 @@
         <command>thunar</command>
       </action>
     </keybind>
-    <keybind key="W-b">
-      <action name="Execute">
-        <command>boosta</command>
-      </action>
-    </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
         <command>xbacklight -dec 10</command>
