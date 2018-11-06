@@ -1,7 +1,7 @@
 [Added Associations]
-text/plain=libreoffice-writer.desktop;gvim.desktop;vim.desktop;
+text/plain=;vim.desktop;
 image/png=firefox-esr.desktop;
-application/pdf=evince.desktop;zathura-pdf-poppler.desktop;gimp.desktop;
+application/pdf=evince.desktop;
 text/x-patch=vim.desktop;
 application/zip=xarchiver.desktop;
 application/x-compressed-tar=xarchiver.desktop;
