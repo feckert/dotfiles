@@ -1,17 +1,21 @@
 [user]
 	name = Florian Eckert
 	email = fe@dev.tdt.de
-[sendemail]
-	suppresscc = self
+
+[sendemail "tdt"]
 	smtpuser = fe@dev.tdt.de
 	smtpserver = mail.dev.tdt.de
 	smtpencryption = tls
+	chainreplyto = false
 	smtpsslcertpath = /usr/local/share/ca-certificates/maildevtdtde.crt
 	smtpserverport = 25
+
 [pull]
 	ff = only
+
 [push]
 	default = simple
+
 [alias]
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\"
 	tree = log --oneline --decorate --all --graph
@@ -21,5 +25,6 @@
 	# git mr/mr-clean <number> <remote>
 	mr = "!f() { git fetch -fu ${2:-upstream} merge-requests/$1/head:mr/${2:-upstream}-$1 && git checkout mr/${2:-upstream}-$1; }; f"
 	mr-clean = "!f() { git checkout master; git for-each-ref refs/heads/mr --format=\"%(refname)\" | grep ${2:-upstream}-$1 && git branch -D mr/${2:-upstream}-$1; }; f"
+
 [core]
 	editor = vi
