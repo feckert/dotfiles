@@ -1,0 +1,12 @@
+[UNIT]
+Decription=i3lock
+Before=sleep.target
+
+[Service]
+User=feckert
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/i3lock
+
+[Install]
+WantedBy=sleep.target
