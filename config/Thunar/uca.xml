@@ -4,7 +4,7 @@
 	<icon>utilities-terminal</icon>
 	<name>Terminal hier öffnen</name>
 	<unique-id>1477898180113104-1</unique-id>
-	<command>urxvt -cd %f</command>
+	<command>xfce4-terminal</command>
 	<description>Beispiel für eine eigene Aktion</description>
 	<patterns>*</patterns>
 	<startup-notify/>
