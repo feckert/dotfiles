@@ -1,10 +1,12 @@
 #!/bin/sh
 
 usage(){
-	echo "$(basename "$0"): do enable/disable nas"
+	echo "$(basename "$0") <action>"
+	echo ""
 	echo "Usage:"
-	echo "$(basename "$0") [ start | stop | snapshot ]"
-	exit 0
+	echo "  start:    start nas with ssh to router (etherwake)"
+	echo "  stop:     stop nas with ssh to nas"
+	echo "  snapshot: make a zfs snapshot with ssh to nas"
 }
 
 main(){
@@ -20,9 +22,9 @@ main(){
 			;;
 		*)
 			usage
+			exit 1
 			;;
 	esac
 }
-#bindfs -o ro --mirror-only=feckert /media/feckert/9b8f3224-7ade-45d0-95ea-9c8481f169c6/ /home/feckert/mnt/backup/
-#fusermount -u /home/feckert/mnt/backup
+
 main "$@"
