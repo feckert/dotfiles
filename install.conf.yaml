@@ -26,6 +26,7 @@
     ~/.bashrc: bashrc
     ~/.compton.conf: compton.conf
     ~/.xsession: xsession
+    ~/.fonts: fonts
     ~/.irssi: irssi/
     ~/bin: bin/
     ~/.vim: vim/
@@ -33,7 +34,7 @@
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.oh-my-zsh-custom: oh-my-zsh-custom/
     ~/.i3: i3/
-    ~/.fonts: fonts
+    ~/Wallpaper: src/Wallpaper/
 - shell:
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/backup
@@ -42,4 +43,5 @@
     - mkdir -p ~/.config
     - mkdir -p ~/.config/Thunar
     - mkdir -p ~/.config/xfce4
+    - mkdir -p ~/Wallpaper
 
