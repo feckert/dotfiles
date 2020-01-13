@@ -5,7 +5,6 @@
     ~/.Xresources: Xresources
     ~/.gitconfig: gitconfig
     ~/.inputrc: inputrc
-    ~/.i3: i3/
     ~/.config/.wm: config/wm
     ~/.config/nitrogen: config/nitrogen
     ~/.config/dunst: config/dunst
@@ -15,9 +14,7 @@
     ~/.config/openbox: config/openbox
     ~/.config/tint2: config/tint2
     ~/.config/mimeaps.list: config/mimeapps.list
-    ~/bin: bin/
     ~/.vimrc: vimrc
-    ~/.vim: vim/
     ~/.quiltrc: quiltrc
     ~/.quiltrc-dpkg: quiltrc-dpkg
     ~/.i3status.conf: i3status.conf
@@ -26,14 +23,17 @@
     ~/.zshrc: zshrc
     ~/.packages-debian-all: packages-debian-all
     ~/.packages-debian-manual: packages-debian-manual
-    ~/.irssi: irssi/
-    ~/.xsession: xsession
-    ~/.fonts: fonts
-    ~/.conky: conky/
+    ~/.bashrc: bashrc
     ~/.compton.conf: compton.conf
+    ~/.xsession: xsession
+    ~/.irssi: irssi/
+    ~/bin: bin/
+    ~/.vim: vim/
+    ~/.conky: conky/
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.oh-my-zsh-custom: oh-my-zsh-custom/
-    ~/.bashrc: bashrc
+    ~/.i3: i3/
+    ~/.fonts: fonts
 - shell:
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/backup
