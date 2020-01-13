@@ -85,6 +85,9 @@ nmap <leader>k :E<cr>
 " Nerdtree shortcuts
 map <C-n> :NERDTreeToggle <CR>
 
+" Nerdtree show dot files
+let NERDTreeShowHidden=1
+
 " ack search word under the cursor
 noremap <leader>a :Ack <cword><CR>
 
