@@ -10,6 +10,7 @@
     ~/.config/dunst: config/dunst
     ~/.config/rofi: config/rofi
     ~/.config/Thunar/uca.xml: config/Thunar/uca.xml
+    ~/.config/zim: src/config/zim
     ~/.config/xfce4: config/xfce4
     ~/.config/openbox: config/openbox
     ~/.config/tint2: config/tint2
@@ -43,5 +44,6 @@
     - mkdir -p ~/.config
     - mkdir -p ~/.config/Thunar
     - mkdir -p ~/.config/xfce4
+    - mkdir -p ~/.config/zim
     - mkdir -p ~/Wallpaper
 
