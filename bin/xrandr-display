@@ -6,25 +6,38 @@ usage() {
 	echo "$(basename "$0"): <mode>"
 	echo "laptop: switch to laptop mode"
 	echo "beamer: switch to beamer mode"
-	echo "office: switch to office mode"
+	echo "office-two: switch to office mode with laptop"
+	echo "office-one: switch to office mode without laptop"
 }
 
 main() {
 	local mode="$1"
 	case "${mode}" in
 		laptop)
+			xrandr --output LVDS1 \
+				--mode 1366x768
 			xrandr --output HDMI1 \
 				--off
 			;;
 		beamer)
+			xrandr --output LVDS1 \
+				--mode 1366x768
 			xrandr --output HDMI1 \
 				--mode 1920x1080 \
 				--left-of LVDS1
 			;;
-		office)
+		office-two)
+			xrandr --output LVDS1 \
+				--mode 1366x768
 			xrandr --output HDMI1 \
 				--mode 1920x1200 \
 				--left-of LVDS1
+			;;
+		office-one)
+			xrandr --output LVDS1 \
+				--off
+			xrandr --output HDMI1 \
+				--mode 1920x1200
 			;;
 		*)
 			usage
