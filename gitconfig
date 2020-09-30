@@ -7,7 +7,7 @@
 	smtpserver = mail.dev.tdt.de
 	smtpencryption = tls
 	chainreplyto = false
-	smtpsslcertpath = /usr/local/share/ca-certificates/mail.dev.tdt.de.crt
+	smtpsslcertpath = /usr/local/share/ca-certificates/TDTRootCA.crt
 	smtpserverport = 25
 
 [pull]
