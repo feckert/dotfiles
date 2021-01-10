@@ -246,7 +246,7 @@
         <menu>client-list-combined-menu</menu>
       </action>
     </keybind>
-    <keybind key="A-Tab">
+    <keybind key="W-Tab">
       <action name="NextWindow">
         <finalactions>
           <action name="Focus"/>
