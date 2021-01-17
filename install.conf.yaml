@@ -6,7 +6,6 @@
     ~/.gitconfig: gitconfig
     ~/.inputrc: inputrc
     ~/.config/.wm: config/wm
-    ~/.config/nitrogen: config/nitrogen
     ~/.config/dunst: config/dunst
     ~/.config/rofi: config/rofi
     ~/.config/Thunar/uca.xml: config/Thunar/uca.xml
