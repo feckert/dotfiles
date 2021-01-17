@@ -26,7 +26,7 @@
     ~/.compton.conf: compton.conf
     ~/.xsession: xsession
     ~/.fonts: fonts
-    ~/.irssi: irssi/
+    ~/.irssi: src/irssi/
     ~/bin: bin/
     ~/.vim: vim/
     ~/.conky: conky/
