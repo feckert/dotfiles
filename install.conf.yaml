@@ -14,8 +14,8 @@
     ~/.config/openbox: config/openbox
     ~/.config/tint2: config/tint2
     ~/.vimrc: vimrc
-    ~/.quiltrc: quiltrc
-    ~/.quiltrc-dpkg: quiltrc-dpkg
+    ~/.quiltrc: src/quiltrc
+    ~/.quiltrc-dpkg: src/quiltrc-dpkg
     ~/.i3status.conf: i3status.conf
     ~/.i3blocks.conf: i3blocks.conf
     ~/.bash_aliases: bash_aliases
