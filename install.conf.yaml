@@ -30,8 +30,8 @@
     ~/bin: bin/
     ~/.vim: vim/
     ~/.conky: conky/
-    ~/.oh-my-zsh: oh-my-zsh/
-    ~/.oh-my-zsh-custom: oh-my-zsh-custom/
+    ~/.oh-my-zsh: src/oh-my-zsh/
+    ~/.oh-my-zsh-custom: src/oh-my-zsh-custom/
     ~/.i3: i3/
     ~/Wallpaper: src/Wallpaper/
 - shell:
