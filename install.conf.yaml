@@ -3,7 +3,7 @@
     ~/.dotfiles: ''
     ~/.tmux.conf: tmux.conf
     ~/.Xresources: Xresources
-    ~/.gitconfig: gitconfig
+    ~/.gitconfig: src/gitconfig
     ~/.inputrc: inputrc
     ~/.config/.wm: config/wm
     ~/.config/dunst: config/dunst
