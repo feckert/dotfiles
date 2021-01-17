@@ -14,7 +14,6 @@
     ~/.config/xfce4: config/xfce4
     ~/.config/openbox: config/openbox
     ~/.config/tint2: config/tint2
-    ~/.config/mimeaps.list: config/mimeapps.list
     ~/.vimrc: vimrc
     ~/.quiltrc: quiltrc
     ~/.quiltrc-dpkg: quiltrc-dpkg
