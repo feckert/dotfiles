@@ -1,7 +1,7 @@
 - clean: ['~']
 - link:
     ~/.dotfiles: ''
-    ~/.tmux.conf: tmux.conf
+    ~/.tmux.conf: src/tmux.conf
     ~/.Xresources: Xresources
     ~/.gitconfig: src/gitconfig
     ~/.inputrc: inputrc
