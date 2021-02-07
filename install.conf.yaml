@@ -32,6 +32,7 @@
     ~/.conky: conky/
     ~/.oh-my-zsh: src/oh-my-zsh/
     ~/.oh-my-zsh-custom: src/oh-my-zsh-custom/
+    ~/.themes: src/themes/
     ~/.i3: i3/
     ~/Wallpaper: src/Wallpaper/
 - shell:
