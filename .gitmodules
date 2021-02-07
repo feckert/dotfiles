@@ -25,3 +25,6 @@
 [submodule "src/oh-my-zsh"]
 	path = oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "src/themes"]
+	path = src/themes
+	url = https://github.com/addy-dclxvi/openbox-theme-collections
