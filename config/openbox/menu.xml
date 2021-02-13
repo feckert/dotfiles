@@ -48,7 +48,7 @@
 	<separator />
 	<item label="Exit">
 		<action name="Execute">
-			<execute>~/bin/rofi-power.sh 'openbox --exit'</execute>
+			<execute>openbox --exit</execute>
 		</action>
 	</item>
 </menu>
