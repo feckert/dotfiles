@@ -1,0 +1,28 @@
+#!/bin/sh
+
+OPTIONS="Reboot system\nPower-off system\nSuspend system\nHibernate system\nExit window manager"
+
+LAUNCHER="rofi -width 30 -dmenu -i -p rofi-power:"
+
+option="$(echo $OPTIONS | $LAUNCHER | awk '{print $1}' | tr -d '\r\n')"
+if [ ${#option} -gt 0 ]; then
+	case $option in
+		Exit)
+			eval $1
+			;;
+		Reboot)
+			systemctl reboot
+			;;
+		Power-off)
+			systemctl poweroff
+			;;
+		Suspend)
+			systemctl suspend
+			;;
+		Hibernate)
+			systemctl hibernate
+			;;
+		*)
+			;;
+	esac
+fi
