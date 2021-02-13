@@ -1,0 +1,21 @@
+#!/bin/sh
+
+PRIMARY_DISPLAY='HDMI-0'
+
+x_out=$(xrandr -q | grep -e '\( \)connected' | awk -F' ' '{ print $1 }')
+
+# Safety - Check if PRIMARY_DISPLAY is connected; if not, bail out of script
+#[[ $(grep ${PRIMARY_DISPLAY} <<< ${x_out}) ]] || exit 0
+
+# Iterate over x_out and disable all monitors except for PRIMARY_DISPLAY
+for monitor in ${x_out} ; do
+	if [ "${monitor}" = "${PRIMARY_DISPLAY}" ]; then
+		xrandr --output "${monitor}" --primary
+	else
+		xrandr --output "${monitor}" --off
+	fi
+done
+
+#{ /etc/lightdm/lightdm.conf }
+#[Seat:*]
+#greeter-setup-script=/usr/local/bin/correct-screen-pantheon-greeter
