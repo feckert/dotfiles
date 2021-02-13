@@ -2,6 +2,13 @@
 
 usage() {
 	echo "Target $1 not supported"
+	echo "Supported targets:"
+	echo " * apu3"
+	echo " * alix"
+	echo " * drno"
+	echo " * largo"
+
+	exit 1
 }
 
 main() {
