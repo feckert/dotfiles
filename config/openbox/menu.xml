@@ -34,6 +34,11 @@
 			<execute>tint2conf</execute>
 		</action>
 	</item>
+	<item label="Nitrogen">
+		<action name="Execute">
+			<execute>nitrogen</execute>
+		</action>
+	</item>
 	<item label="Reconfigure">
 		<action name="Reconfigure" />
 	</item>
