@@ -1,0 +1,47 @@
+#!/bin/sh
+
+usage() {
+	local code="$1"
+	local msg="$2"
+
+	echo "$msg"
+
+	echo "Usage: $(basename $0) [ config | connect]"
+	echo "Supported commands:"
+	echo " config-push:  Copy config to remote server"
+	echo " connect:      Connect to remote tmux irssi session"
+	echo " cert-show     Show nick certificate informations"
+
+	exit "$code"
+}
+
+main() {
+	local cmd="$1"
+
+	case "${cmd}" in
+		config-push)
+			scp -r "$HOME/.irssi/"* "irc:/$HOME/.irssi/"
+			;;
+		config-pull)
+			scp -r "irc:/$HOME/.irssi/"* "$HOME/.irssi/"
+			;;
+		connect)
+			ssh irc -t tmux attach
+			;;
+		cert-show)
+			if [ -f "$HOME/.irssi/certs/nick.cer" ]; then
+				openssl x509 \
+					-noout \
+					-fingerprint \
+					-SHA1 -text < "$HOME/.irssi/certs/nick.cer"
+			else
+				echo "Zertifkation files \"$HOME/.irssi/certs/nick.cer\" not found"
+			fi
+			;;
+		*)
+			usage "1" "Command not supprted"
+			;;
+	esac
+}
+
+main "$@"
