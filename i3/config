@@ -167,9 +167,6 @@ exec --no-startup-id nitrogen --restore ~/Wallpaper
 # Start composite manager
 exec --no-startup-id compton --config ~/.compton.conf
 
-# Start pulseaudio sound tray
-exec --no-startup-id pasystray
-
 # Bind screenshot tool
 bindsym --release $mod+z exec scrot -s -e'mv $f ~/Bilder/Screenshots/'
 
