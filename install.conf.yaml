@@ -13,6 +13,7 @@
     ~/.config/xfce4: config/xfce4
     ~/.config/openbox: config/openbox
     ~/.config/tint2: config/tint2
+    ~/.config/nvim: src/config/nvim
     ~/.vimrc: vimrc
     ~/.quiltrc: src/quiltrc
     ~/.quiltrc-dpkg: src/quiltrc-dpkg
