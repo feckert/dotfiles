@@ -14,6 +14,7 @@
     ~/.config/openbox: config/openbox
     ~/.config/tint2: config/tint2
     ~/.config/nvim: src/config/nvim
+    ~/.config/systemd: src/config/systemd
     ~/.vimrc: vimrc
     ~/.quiltrc: src/quiltrc
     ~/.quiltrc-dpkg: src/quiltrc-dpkg
@@ -45,5 +46,6 @@
     - mkdir -p ~/.config/Thunar
     - mkdir -p ~/.config/xfce4
     - mkdir -p ~/.config/zim
+    - mkdir -p ~/.config/systemd
     - mkdir -p ~/Wallpaper
 
