@@ -26,6 +26,7 @@
     ~/.packages-debian-manual: packages-debian-manual
     ~/.bashrc: bashrc
     ~/.compton.conf: compton.conf
+    ~/.tigrc: src/tigrc
     ~/.xsession: xsession
     ~/.fonts: fonts
     ~/.profile: src/profile
