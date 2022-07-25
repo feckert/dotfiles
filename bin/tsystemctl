@@ -1,0 +1,92 @@
+#!/bin/sh
+
+usage() {
+	local status="$1"
+	local msg="$2"
+	if [ -n "$msg" ]; then
+		echo "$msg"
+		echo ""
+	fi
+	echo "Usage: $(basename "$0") <command> <tunnel>"
+	echo "command:"
+	echo "  list:    List available ssh tunnels"
+	echo "  start:   Sart ssh tunnel"
+	echo "  stop:    Stop ssh tunnel"
+	echo "  status:  Show ssh tunnel status"
+	echo ""
+	exit "$status"
+}
+
+check_config() {
+	local tunnel="$1"
+
+	[ -f "${HOME}/default/secure-tunnel@${tunnel}" ] || {
+		usage "3" "Tunnel config '${tunnel}' not found"
+	}
+}
+
+systemctl_list() {
+	echo "Following tunnel configs are available:"
+	for tunnels in ${HOME}/default/*; do
+		echo "${tunnels##*@}"
+	done
+}
+
+systemctl_start() {
+	local tunnel="$1"
+
+	check_config "$tunnel"
+
+	systemctl --user start secure-tunnel@${tunnel}
+}
+
+systemctl_stop() {
+	local tunnel="$1"
+
+	check_config "$tunnel"
+	systemctl --user stop secure-tunnel@${tunnel}
+}
+
+systemctl_status() {
+	local tunnel="$1"
+	check_config "$tunnel"
+
+	systemctl --user status secure-tunnel@${tunnel}
+}
+
+main() {
+	local cmd="$1"
+	shift
+	local tunnel="$1"
+
+	case "${cmd}" in
+		list)
+			systemctl_list
+			;;
+		start)
+			[ -z "$tunnel" ] && {
+				usage "2" "Missing tunnel config"
+			}
+			systemctl_start "$tunnel"
+			;;
+		stop)
+			[ -z "$tunnel" ] && {
+				usage "2" "Missing tunnel config"
+			}
+			systemctl_stop "$tunnel"
+			;;
+		status)
+			[ -z "$tunnel" ] && {
+				usage "2" "Missing tunnel config"
+			}
+			systemctl_status "$tunnel"
+			;;
+		*)
+			usage "1" "Command not supported"
+			;;
+	esac
+
+	exit 0
+}
+
+main "$@"
