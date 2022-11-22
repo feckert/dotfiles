@@ -31,6 +31,8 @@ for dir in /tmp/*; do
 	value="${dir#/tmp/ssh-*}"
 	if [ -d "/tmp/ssh-${value}" ]; then
 		for agent in /tmp/ssh-${value}/*; do
+			owner="$(stat --format '%U' "$agent")"
+			[ "$owner" != "$USER" ] && continue
 			uid="$(id -u)"
 			if [ -h /var/run/user/${uid}/ssh-agent.socket ]; then
 				rm /var/run/user/${uid}/ssh-agent.socket
