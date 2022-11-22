@@ -10,6 +10,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ap/vim-buftabline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 call vundle#end()
@@ -60,6 +61,7 @@ set undodir=~/.vim/undo//
 colorscheme industry
 
 " Donot select line number and windows
+set ttymouse=xterm2
 set mouse=a
 
 " Allow changing buffer selection
