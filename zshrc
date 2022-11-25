@@ -6,6 +6,20 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Path to the current ssh-agent socket this is needed for ssh-add
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+for dir in /tmp/*; do
+	value="${dir#/tmp/ssh-*}"
+	if [ -d "/tmp/ssh-${value}" ]; then
+		for agent in /tmp/ssh-${value}/*; do
+			owner="$(stat --format '%U' "$agent")"
+			[ "$owner" != "$USER" ] && continue
+			uid="$(id -u)"
+			if [ -h "$SSH_AUTH_SOCK" ]; then
+				rm "$SSH_AUTH_SOCK"
+			fi
+			ln -s "$agent" "$SSH_AUTH_SOCK"
+		done
+	fi
+done
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.

@@ -25,19 +25,3 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
-
-# create ssh-agent link
-for dir in /tmp/*; do
-	value="${dir#/tmp/ssh-*}"
-	if [ -d "/tmp/ssh-${value}" ]; then
-		for agent in /tmp/ssh-${value}/*; do
-			owner="$(stat --format '%U' "$agent")"
-			[ "$owner" != "$USER" ] && continue
-			uid="$(id -u)"
-			if [ -h /var/run/user/${uid}/ssh-agent.socket ]; then
-				rm /var/run/user/${uid}/ssh-agent.socket
-			fi
-			ln -s "$agent" /var/run/user/${uid}/ssh-agent.socket
-		done
-	fi
-done
