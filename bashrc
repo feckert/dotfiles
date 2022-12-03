@@ -113,3 +113,4 @@ if ! shopt -oq posix; then
 fi
 
 export LC_ALL=en_US.UTF-8
+. "$HOME/.cargo/env"
