@@ -25,6 +25,7 @@
     ~/.packages-debian-all: packages-debian-all
     ~/.packages-debian-manual: packages-debian-manual
     ~/.bashrc: bashrc
+    ~/.profile: src/profile
     ~/.compton.conf: compton.conf
     ~/.tigrc: src/tigrc
     ~/.xsession: xsession
