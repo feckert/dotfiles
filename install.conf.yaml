@@ -7,6 +7,7 @@
     ~/.inputrc: inputrc
     ~/.config/.wm: config/wm
     ~/.config/dunst: config/dunst
+    ~/.config/katerc: src/config/katerc
     ~/.config/rofi: config/rofi
     ~/.config/Thunar/uca.xml: config/Thunar/uca.xml
     ~/.config/zim: src/config/zim
