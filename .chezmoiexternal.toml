@@ -4,3 +4,52 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+
+[".oh-my-zsh"]
+    type = "archive"
+    url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+[".vim/bundle/vim-airline"]
+    type = "archive"
+    url = "https://github.com/vim-airline/vim-airline/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+[".vim/bundle/Vundle.vim"]
+    type = "archive"
+    url = "https://github.com/VundleVim/Vundle.vim/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+[".vim/bundle/vim-airline-themes"]
+    type = "archive"
+    url = "https://github.com/vim-airline/vim-airline-themes/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+[".vim/bundle/ctrlp.vim"]
+    type = "archive"
+    url = "https://github.com/ctrlpvim/ctrlp.vim/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+[".vim/bundle/nerdtree"]
+    type = "archive"
+    url = "https://github.com/scrooloose/nerdtree/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+[".vim/bundle/ack.vim"]
+    type = "archive"
+    url = "https://github.com/mileszs/ack.vim/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
