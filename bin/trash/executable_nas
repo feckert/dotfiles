@@ -1,0 +1,30 @@
+#!/bin/sh
+
+usage(){
+	echo "$(basename "$0") <action>"
+	echo ""
+	echo "Usage:"
+	echo "  start:    start nas with ssh to router (etherwake)"
+	echo "  stop:     stop nas with ssh to nas"
+	echo "  snapshot: make a zfs snapshot with ssh to nas"
+}
+
+main(){
+	case "${1}" in
+		start)
+			ssh root@skynet.lan "/etc/init.d/etherwake start zion"
+			;;
+		stop)
+			ssh root@zion.lan "/sbin/shutdown -h now"
+			;;
+		snapshot)
+			ssh root@zion.lan "/usr/sbin/zfSnap -z -s -S -a 4w -r merkur"
+			;;
+		*)
+			usage
+			exit 1
+			;;
+	esac
+}
+
+main "$@"

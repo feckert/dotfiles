@@ -1,0 +1,87 @@
+#!/bin/sh
+
+usage() {
+	local status="$1"
+	local msg="$2"
+	if [ -n "$msg" ]; then
+		echo "$msg"
+		echo ""
+	fi
+	echo "Usage: $(basename "$0") < add | list >"
+	echo ""
+	echo "add <name> <file>:  Add a new trusted certificate"
+	echo "  <name>:  Name off the new certificate"
+	echo "  <file>:  Certificate file"
+	echo ""
+	echo "list <name>: List certificted name"
+	echo "  <name>:  Name off the certificate"
+	exit "$status"
+}
+
+add() {
+	local certname="$1"
+	local certfile="$2"
+
+	local certdir
+
+	[ -f "$certfile" ] || {
+		usage "2" "Certificate file does not exist"
+	}
+
+	[ -z "$certname" ] || {
+		usage "3" "Please append a uniq certifacte name"
+	}
+
+	### For cert8 (legacy - DBM)
+	for certDB in $(find ~/ -name "cert8.db"); do
+		echo "Add ${certname} to ${certDB}"
+		certdir=$(dirname "${certDB}");
+#		certutil \
+#			-A \
+#			-n "${certname}" \
+#			-t "TCu,Cu,Tu" \
+#			-i "${certfile}" \
+#			-d dbm:"${certdir}"
+	done
+
+	### For cert9 (SQL)
+	for certDB in $(find ~/ -name "cert9.db"); do
+		echo "Add ${certname} to ${certDB}"
+		certdir=$(dirname "${certDB}");
+#		certutil \
+#			-A \
+#			-n "${certname}" \
+#			-t "TCu,Cu,Tu" \
+#			-i "${certfile}" \
+#			-d sql:"${certdir}"
+	done
+}
+
+list() {
+	local certname="$1"
+}
+
+main() {
+	local cmd="$1"
+
+	command -v certutil 1>/dev/null 2>&1
+	ret="$?"
+	if [ "$ret" -ne 0 ]; then
+		echo "Please install certutil"
+		exit 1
+	fi
+
+	case "$cmd" in
+		"add")
+			add "$2" "$3"
+			;;
+		"list")
+			list "$1"
+			;;
+		*)
+			usage "1" "Command not supported"
+			;;
+	esac
+}
+
+main "$@"

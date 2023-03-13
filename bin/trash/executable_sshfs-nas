@@ -1,0 +1,51 @@
+#!/bin/sh
+
+USER="feckert"
+HOST="zion.lan"
+
+#DIR="Filme"
+DIR="Audio"
+
+usage() {
+	echo "$(basename "$0"): <command>"
+	echo "mount:    mount directory from nas"
+	echo "umount:   umount directory from nas"
+	exit 1
+}
+
+mount() {
+	mkdir -p "${HOME}/mnt/${DIR}"
+	sshfs "${USER}@${HOST}:/mnt/${DIR}" \
+		"${HOME}/mnt/${DIR}" \
+		-o idmap=user \
+		-o uid="$(id -u)" \
+		-o gid="$(id -g)"
+}
+
+umount() {
+	fusermount -u "${HOME}/mnt/${DIR}"
+
+
+	#@todo check if mountet and then remove dir
+}
+
+main() {
+	if [ "$#" -eq 0 ] ; then
+		usage
+	fi
+
+	case "${1}" in
+		mount)
+			mount
+			;;
+		umount)
+			umount
+			;;
+		*)
+			usage
+			exit 1
+			;;
+	esac
+}
+
+main "$@"

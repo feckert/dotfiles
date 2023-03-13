@@ -1,0 +1,14 @@
+#!/bin/sh
+
+main() {
+	local token="$1"
+	local organization="$2"
+	local repo="$3"
+	local branch="$4"
+
+	curl -sL --user "feckert:${token}" \
+		https://github.com/${organization}/${repo}/tarball/${branch} \
+		| gzip -9 > ${repo}-${branch}.tar.gz
+}
+
+main "$@"

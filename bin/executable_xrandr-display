@@ -1,0 +1,48 @@
+#!/bin/sh
+
+CMD="${1}"
+
+usage() {
+	echo "$(basename "$0"): <mode>"
+	echo "laptop: switch to laptop mode"
+	echo "beamer: switch to beamer mode"
+	echo "office-two: switch to office mode with laptop"
+	echo "office-one: switch to office mode without laptop"
+}
+
+main() {
+	local mode="$1"
+	case "${mode}" in
+		laptop)
+			xrandr --output LVDS-1 \
+				--mode 1366x768
+			xrandr --output DP-1 \
+				--off
+			;;
+		beamer)
+			xrandr --output LVDS-1 \
+				--off
+			xrandr --output DP-1 \
+				--mode 1920x1080
+			;;
+		office-two)
+			xrandr --output LVDS-1 \
+				--mode 1366x768
+			xrandr --output DP-1 \
+				--mode 1920x1200 \
+				--left-of LVDS-1
+			;;
+		office-one)
+			xrandr --output LVDS-1 \
+				--off
+			xrandr --output DP-1 \
+				--mode 1920x1200
+			;;
+		*)
+			usage
+			exit 1
+			;;
+	esac
+}
+
+main "$@"

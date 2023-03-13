@@ -1,0 +1,27 @@
+#!/bin/sh
+
+
+main() {
+	local pdf="$1"
+
+	[ -z "$pdf" ] && {
+		echo "File argument missing"
+		exit 1
+	}
+
+	[ -f "$pdf" ] || {
+		echo "PDF file $pdf not found"
+		exit 2
+	}
+
+	gs -sDEVICE=pdfwrite \
+		-dCompatibilityLevel=1.4 \
+		-dPDFSETTINGS=/ebook \
+		-dNOPAUSE \
+		-dQUIET \
+		-dBATCH \
+		-sOutputFile="${pdf%\.pdf}-small.pdf" \
+		"$pdf"
+}
+
+main "$@"
