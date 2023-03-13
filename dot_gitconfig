@@ -1,0 +1,32 @@
+[user]
+	name = Florian Eckert
+	email = fe@dev.tdt.de
+
+[sendemail "tdt"]
+	smtpuser = fe@dev.tdt.de
+	smtpserver = mail.dev.tdt.de
+	smtpencryption = tls
+	chainreplyto = false
+	smtpsslcertpath = /usr/local/share/ca-certificates/TDTRootCA.crt
+	smtpserverport = 25
+
+[pull]
+	ff = only
+
+[push]
+	default = simple
+
+[alias]
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\"
+	tree = log --oneline --decorate --all --graph
+	# git pr/pr-clean <number> <remote>
+	pr = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/${2:-upstream}-$1 && git checkout pr/${2:-upstream}-$1; }; f"
+	pr-clean = "!f() { git checkout master; git for-each-ref refs/heads/pr --format=\"%(refname)\" | grep ${2:-upstream}-$1 && git branch -D pr/${2:-upstream}-$1; }; f"
+	# git mr/mr-clean <number> <remote>
+	mr = "!f() { git fetch -fu ${2:-upstream} merge-requests/$1/head:mr/${2:-upstream}-$1 && git checkout mr/${2:-upstream}-$1; }; f"
+	mr-clean = "!f() { git checkout master; git for-each-ref refs/heads/mr --format=\"%(refname)\" | grep ${2:-upstream}-$1 && git branch -D mr/${2:-upstream}-$1; }; f"
+
+[core]
+	editor = vi
+[color]
+	ui = auto
