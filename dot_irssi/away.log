@@ -1,0 +1,27 @@
+--- Log opened Do Sep 24 23:06:01 2020
+23:09 </jowg5/ │g eich weiß nur dass das mal alles funktioniert hat, ich hab mir den Plugin-Code nicht genau angeschaut
+23:09 </jowg5/ │g evermutlich ist das durch das Plugin-Refactoring kaputt gegangen
+23:12 </okraitsg5/ │g ehttps://irssi.org/documentation/help/ignore/
+23:16 </okraitsg5/ │g e /ignore * JOINS PARTS QUITS
+23:16 </okraitsg5/ │g eHab ich verwendet
+--- Day changed Fr Sep 25 2020
+07:18 ?/feckertg5/ │g emuss ich das immer mein neustart eingeben oder kann ich das in der Konfiguration speichern
+07:50 </okraitsg5/ │g e /save
+08:02 </okraitsg5/ │g eDann wird die Config geschrieben
+08:31 </okraitsg5/ │g eMit den ignores ist es auf einmal so ruhig in den Channels :)
+08:32 </okraitsg5/ │g e281: activity_hide_level = "JOINS PARTS QUITS";
+08:33 </okraitsg5/ │g eDas ist übrigens glaub ich auch noch einmal ein ignore: damit joins, parts und quits nicht dazu führen, dass die Channel Nummer bei Act: angezeigt wird
+08:36 ?/feckertg5/ │g eDa kann ich dir nur zustimmen. Das sollte wir war for dem release noch fixen
+08:37 ?/feckertg5/ │g eBeim proto plugin funktioniert das ja auch! Da muss ich allerdings aktive das protokoll beim wechsel mit einem button bestätigen. Das ist beim luci-app-ledtrig-* nicht nötig
+08:54 ?/feckertg5/ │g eok danke muss ich mir auch nochmal anschauen
+08:57 </okraitsg5/ │g eMit meiner Config solltest Du nichts dafür machen müssen
+08:58 </okraitsg5/ │g eAuf jeden Fall ist es jetzt recht ruhig in den Channels :)
+09:49 ?/feckertg5/ │g edas hab ich schon gesehen 
+09:49 ?/feckertg5/ │g edie farben sind immer gleich
+09:49 </okraitsg5/ │g e /script load nickcolor
+09:56 </okraitsg5/ │g eallerdings funktioniert autorun mit dem Debian irssi irgendwie nicht so wie auf https://scripts.irssi.org/ erklärt
+09:56 </okraitsg5/ │g eder kennt den Befehl nicht
+10:13 </okraitsg5/ │g emkdir .irssi/scripts/autorun; cd .irssi/scripts/autorun; ln -s ../nickcolor.pl
+--- Log closed Fr Sep 25 11:52:40 2020
+--- Log opened Fr Sep 25 18:03:15 2020
+--- Log closed Sa Sep 26 10:38:43 2020
