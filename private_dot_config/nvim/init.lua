@@ -187,6 +187,18 @@ require('lazy').setup({
   --    An additional note is that if you only copied in the `init.lua`, you can just comment this line
   --    to get rid of the warning telling you that there are not plugins in `lua/custom/plugins/`.
 --  { import = 'custom.plugins' },
+  "nvim-lua/plenary.nvim",
+  "MunifTanjim/nui.nvim",
+  "nvim-tree/nvim-web-devicons",
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+  }
 }, {})
 
 -- [[ Setting options ]]
