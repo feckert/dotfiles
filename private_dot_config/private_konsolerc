@@ -1,0 +1,19 @@
+[Desktop Entry]
+DefaultProfile=New Profile.profile
+
+[MainWindow]
+HDMI-1 HDMI-2 HDMI-3 Height 1200=771
+HDMI-1 HDMI-2 HDMI-3 Width 1920=1280
+HDMI-1 HDMI-2 HDMI-3 Window-Maximized 1920x1200=true
+HDMI-1 HDMI-2 HDMI-3 XPosition=1920
+HDMI-1 HDMI-2 HDMI-3 YPosition=29
+HDMI-2 HDMI-1 HDMI-3 Height 1200=624
+HDMI-2 HDMI-1 HDMI-3 Width 1920=1280
+HDMI-2 HDMI-1 HDMI-3 Window-Maximized 1920x1200=true
+HDMI-2 HDMI-1 HDMI-3 XPosition=3840
+HDMI-2 HDMI-1 HDMI-3 YPosition=29
+HDMI-2 Window-Maximized 1920x1200=true
+MenuBar=Disabled
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAAAAB4AAAASTAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
