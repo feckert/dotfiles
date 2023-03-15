@@ -130,6 +130,9 @@ require('lazy').setup({
         component_separators = '|',
         section_separators = '',
       },
+      tabline = {
+          lualine_a = {'buffers'},
+      },
     },
   },
 
@@ -212,6 +215,18 @@ vim.wo.number = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
+
+--vim.opt.listchars = { space = '.', tab = '>~', eol = '↵' }
+vim.opt.listchars = {
+  space = '.',
+  tab = '|.',
+  trail = '.',
+  extends = '>',
+  precedes = '<',
+  eol = '↵'
+}
+--stab:\|.,trail:.,extends:>,precedes:< 
+vim.opt.list = true
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
