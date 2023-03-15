@@ -17,6 +17,7 @@ call vundle#end()
 filetype plugin indent on
 
 set encoding=utf-8
+set updatetime=500
 
 " Plugin settings airline
 let g:airline_theme='powerlineish'
