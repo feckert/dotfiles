@@ -94,3 +94,7 @@ let NERDTreeShowHidden=1
 " ack search word under the cursor
 noremap <leader>a :Ack <cword><CR>
 
+" vim-gitgutter set colors of signcolumn row
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
