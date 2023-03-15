@@ -98,3 +98,6 @@ noremap <leader>a :Ack <cword><CR>
 highlight GitGutterAdd    guifg=#009900 ctermfg=2
 highlight GitGutterChange guifg=#bbbb00 ctermfg=3
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+
+" vim-gitgutter set color to line color
+highlight clear SignColumn
