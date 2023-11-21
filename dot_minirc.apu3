@@ -1,0 +1,3 @@
+# Machinell erzeugte Datei - Verwenden Sie "minicom -s" zum Ändern
+pu port             /dev/ttyUSB_APU3
+pu rtscts           No 
