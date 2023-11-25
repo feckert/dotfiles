@@ -21,3 +21,9 @@
     url = "https://github.com/neovim/neovim/releases/download/v0.9.4/nvim.appimage"
     checksum.sha256 = "028cfaaf551d64cbb2f39d15363ed78edb01e2673579b48cb694e3604207d656"
     executable = true
+
+[".local/bin/leocad"]
+    type = "file"
+    url = "https://github.com/leozide/leocad/releases/download/v23.03/LeoCAD-Linux-23.03-x86_64.AppImage"
+    checksum.sha256 = "23c94a500f87e6b46fef366534ed822a748dec861af0150759073491eba4c0f3"
+    executable = true
