@@ -1,0 +1,27 @@
+#!/bin/sh
+
+usage() {
+	echo "Usage: $(basename $0) list"
+	echo "list:"
+	echo "   Show installed packages from external sources"
+
+	exit 1
+}
+
+main() {
+	local cmd="$1"
+
+	if [ "$#" -eq 0 ] ; then
+		usage
+	fi
+
+	case "${cmd}" in
+		list)
+			dpkg-query -W -f '${Package}\n' | \
+				xargs apt-cache policy | \
+				sed -ne '/^ /{H;$!b};x;/\*\*\* [^\n]*\n[^\n]*\/var\/lib\/dpkg\/status/p'
+			;;
+	esac
+}
+
+main "$@"
