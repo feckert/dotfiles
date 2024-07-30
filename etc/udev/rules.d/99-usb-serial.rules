@@ -1,4 +1,4 @@
 SUBSYSTEM=="tty", ATTRS{serial}=="DN01CA56", SYMLINK+="ttyUSB_DRNO"
 SUBSYSTEM=="tty", ATTRS{serial}=="DN01HG1T", SYMLINK+="ttyUSB_LARGO"
 SUBSYSTEM=="tty", KERNELS=="1-4.3", ATTRS{manufacturer}=="Prolific Technology Inc.", SYMLINK+="ttyUSB_APU3"
-SUBSYSTEM=="tty", KERNELS=="1-4.4", ATTRS{manufacturer}=="Prolific Technology Inc.", SYMLINK+="ttyUSB_ALIX"
+SUBSYSTEM=="tty", KERNELS=="1-4.4", ATTRS{manufacturer}=="Prolific Technology Inc.", SYMLINK+="ttyUSB_YODA"
