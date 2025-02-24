@@ -1,0 +1,45 @@
+#!/bin/sh
+
+main() {
+  local package_dir="$1"
+  local source_dir="$2"
+  local build_dir="$3"
+
+  [ -z "$package_dir" ] && {
+    echo "Package directory missing"
+    exit 1
+  }
+
+  [ -z "$source_dir" ] && {
+    echo "Source directory missing"
+    exit 1
+  }
+
+  [ -z "$build_dir" ] && {
+    echo "Build directory missing"
+    exit 1
+  }
+
+  [ -d "$package_dir" ] || {
+    echo "Package directory does not exist"
+    exit 1
+  }
+
+  [ -d "$source_dir" ] || {
+    echo "Source directory does not exist"
+    exit 1
+  }
+
+  [ -d "$build_dir" ] || {
+    echo "Build directory does not exist"
+    exit 1
+  }
+
+  echo "package_dir: ${package_dir}"
+  echo "source_dir: ${source_dir}"
+  echo "build_dir: ${build_dir}"
+
+  find ${source_dir}/ -name '*.h' -o -name '*.c' | entr -s "rsync --exclude='.git' --include='*/' --include='*.c' --include='*.h' --archive --verbose ${source_dir}/ ${build_dir}/ && make ${package_dir}/compile"
+}
+
+main "$@"
