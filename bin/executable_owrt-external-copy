@@ -1,45 +1,67 @@
 #!/bin/sh
 
+usage() {
+	local rvalue="$1"
+	local msg="$2"
+
+	[ -z "${msg}" ] || echo "$msg"
+	echo ""
+	echo "Usage: $(basename "$0") <package_dir> <build_dir> <source_dir>"
+	echo "package_dir:   relative path from OpenWrt directory to package directory (./packages/feeds/packages/modemmanager)"
+	echo "build_dir:     relative path from OpenWrt directory to build directory (./build_dir/target-x86_64/modemmanager-<version>)"
+	echo "source_dir:    absolut path to source directory (<user>/gitlab/ModemManager)"
+
+	exit "${rvalue}"
+}
+
 main() {
-  local package_dir="$1"
-  local source_dir="$2"
-  local build_dir="$3"
+	local package_dir="$1"
+	local build_dir="$2"
+	local source_dir="$3"
 
-  [ -z "$package_dir" ] && {
-    echo "Package directory missing"
-    exit 1
-  }
+	[ -z "$package_dir" ] && {
+		usage 1 "Relative (OpenWrt) path to the package directory missing"
+	}
 
-  [ -z "$source_dir" ] && {
-    echo "Source directory missing"
-    exit 1
-  }
+	[ -z "$build_dir" ] && {
+		usage 1 "Relative (OpenWrt) path to the build directory missing"
+	}
 
-  [ -z "$build_dir" ] && {
-    echo "Build directory missing"
-    exit 1
-  }
+	[ -z "$source_dir" ] && {
+		usage 1 "Absolut path to the source directory missing"
+	}
 
-  [ -d "$package_dir" ] || {
-    echo "Package directory does not exist"
-    exit 1
-  }
+	[ -d "$package_dir" ] || {
+		echo "Package directory '${package_dir}' does not exist"
+		exit 1
+	}
 
-  [ -d "$source_dir" ] || {
-    echo "Source directory does not exist"
-    exit 1
-  }
+	[ -d "$source_dir" ] || {
+		echo "Source directory '${source_dir}' does not exist"
+		exit 1
+	}
 
-  [ -d "$build_dir" ] || {
-    echo "Build directory does not exist"
-    exit 1
-  }
+	[ -d "$build_dir" ] || {
+		echo "Build directory '${build_dir}' does not exist"
+		exit 1
+	}
 
-  echo "package_dir: ${package_dir}"
-  echo "source_dir: ${source_dir}"
-  echo "build_dir: ${build_dir}"
+	echo "package_dir: ${package_dir}"
+	echo "source_dir: ${source_dir}"
+	echo "build_dir: ${build_dir}"
 
-  find ${source_dir}/ -name '*.h' -o -name '*.c' | entr -s "rsync --exclude='.git' --include='*/' --include='*.c' --include='*.h' --archive --verbose ${source_dir}/ ${build_dir}/ && make ${package_dir}/compile"
+	cmd="rsync --exclude='.git'"
+	cmd="$cmd --include='*/'"
+	cmd="$cmd --include='*.c'"
+	cmd="$cmd --include='*.h'"
+	cmd="$cmd --archive"
+	cmd="$cmd --verbose"
+	cmd="$cmd ${source_dir}/"
+	cmd="$cmd ${build_dir}/ &&"
+	cmd="$cmd make TOPDIR=$(pwd) -C ${package_dir} compile V=s"
+
+	echo "$cmd"
+	find ${source_dir}/ -name '*.h' -o -name '*.c' | entr -s "$cmd"
 }
 
 main "$@"
