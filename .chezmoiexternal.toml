@@ -7,8 +7,8 @@
 
 [".fonts"]
     type = "archive"
-    url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.0/Hack.zip"
-    checksum.sha356 = "1fd74197a196dcd70bc37c811c3a629acf7554c1fb45b4b48c634a7c75953e41"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Hack.zip"
+    checksum.sha356 = "d1b1488ef6a970dc3a2826b788d31d81b2f308ad42ef70ed62d35d0bf6189336"
     exact = true
 
 [".tmux/plugins/tpm"]
