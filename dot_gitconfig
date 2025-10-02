@@ -30,3 +30,6 @@
 	editor = vi
 [color]
 	ui = auto
+
+[merge]
+	conflictStyle =  diff3
