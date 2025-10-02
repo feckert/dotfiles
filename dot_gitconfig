@@ -28,6 +28,7 @@
 
 [core]
 	editor = vi
+
 [color]
 	ui = auto
 
