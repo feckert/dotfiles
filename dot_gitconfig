@@ -2,13 +2,13 @@
 	name = Florian Eckert
 	email = fe@dev.tdt.de
 
-[sendemail "tdt"]
-	smtpuser = fe@dev.tdt.de
-	smtpserver = mail.dev.tdt.de
-	smtpencryption = tls
+[sendemail]
+	smtpServer = mail.dev.tdt.de
+	smtpServerPort = 25
+	smtpEncryption = tls
+	smtpSSLCertPath = /usr/local/share/ca-certificates/TDTRootCA.crt
+	smtpUser = fe@dev.tdt.de
 	chainreplyto = false
-	smtpsslcertpath = /usr/local/share/ca-certificates/TDTRootCA.crt
-	smtpserverport = 25
 
 [pull]
 	ff = only
