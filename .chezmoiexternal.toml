@@ -17,8 +17,8 @@
 
 [".local/bin/nvim"]
     type = "file"
-    url = "https://github.com/neovim/neovim/releases/download/v0.11.4/nvim-linux-x86_64.appimage"
-    checksum.sha256 = "79e7e160f9505819a5e12f3d9366be94213f5309fb912ef4ef3af52df3982977"
+    url = "https://github.com/neovim/neovim/releases/download/v0.11.6/nvim-linux-x86_64.appimage"
+    checksum.sha256 = "77dd16d86e6549a0bbbbfbc18636d434ffe5b0ac8b9854a7669e35cc4b93dda0"
     executable = true
 
 [".local/bin/leocad"]
