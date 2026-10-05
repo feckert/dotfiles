@@ -1,0 +1,24 @@
+#!/bin/sh
+
+VERSION=1.18.32
+
+main() {
+	local cmd="$1"
+
+	if [ "$cmd" = "shell" ]; then
+		cmd="--entrypoint bash"
+	else
+		cmd="--entrypoint opencode"
+	fi
+
+	podman run --rm \
+		--interactive \
+		--tty \
+		--userns=keep-id:uid=1001,gid=1001 \
+		--volume ${PWD}:/workspace \
+		--volume ${HOME}/.config/opencode:/home/opencode/.config/opencode \
+		${cmd} \
+		localhost/opencode-pod:${VERSION}
+}
+
+main "$@"
