@@ -1,0 +1,26 @@
+#!/bin/sh
+
+VERSION=v2.1.287
+
+main() {
+	local cmd="$1"
+
+	if [ "$cmd" = "shell" ]; then
+		cmd="--entrypoint bash"
+	else
+		cmd="--entrypoint claude"
+	fi
+
+	podman run --rm \
+		--interactive \
+		--tty \
+		--userns=keep-id:uid=1001,gid=1001 \
+		--volume ${PWD}:/workspace \
+		--volume ${HOME}/.claude:/home/claude/.claude \
+		--env CLAUDE_CODE_OAUTH_TOKEN=${CLAUDE_CODE_OAUTH_TOKEN} \
+		--env CLAUDE_CONFIG_DIR=/home/claude/.claude \
+		${cmd} \
+		localhost/claudecode-pod:${VERSION}
+}
+
+main "$@"
