@@ -11,12 +11,17 @@ main() {
 		cmd="--entrypoint opencode"
 	fi
 
+	mkdir --parents "${HOME}/.local/share/opencode"
+	mkdir --parents "${HOME}/.local/state/opencode"
+
 	podman run --rm \
 		--interactive \
 		--tty \
 		--userns=keep-id:uid=1001,gid=1001 \
 		--volume ${PWD}:/workspace \
 		--volume ${HOME}/.config/opencode:/home/opencode/.config/opencode \
+		--volume "${HOME}/.local/share/opencode:/home/opencode/.local/share/opencode" \
+		--volume "${HOME}/.local/state/opencode:/home/opencode/.local/state/opencode" \
 		${cmd} \
 		localhost/opencode-pod:${VERSION}
 }
