@@ -25,6 +25,7 @@
 	# git mr/mr-clean <number> <remote>
 	mr = "!f() { git fetch -fu ${2:-upstream} merge-requests/$1/head:mr/${2:-upstream}-$1 && git checkout mr/${2:-upstream}-$1; }; f"
 	mr-clean = "!f() { git checkout master; git for-each-ref refs/heads/mr --format=\"%(refname)\" | grep ${2:-upstream}-$1 && git branch -D mr/${2:-upstream}-$1; }; f"
+	fixline = "!f() { git show -s --format=\"Fixes: %h (\\\"%s\\\")\" \"$1\"; }; f"
 
 [core]
 	editor = vi
